@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/main_bg"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<com.deya.hospital.util.CommonTopView
+    android:id="@+id/topView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_48"
+    android:text="设置"></com.deya.hospital.util.CommonTopView>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/mybills"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp_48"
+            android:background="@drawable/listselect_btn"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/imgbill"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_centerVertical="true"
+                android:src="@drawable/zhanghao_but" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@+id/imgbill"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:text="实名认证"
+                android:textColor="@color/font_left_label"
+                android:textSize="@dimen/sp_16" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right_next_img" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginLeft="@dimen/dp_35"
+            android:background="#DDDDDD" />
+
+
+        <LinearLayout
+            android:id="@+id/share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+        <RelativeLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp_48"
+            android:background="@drawable/listselect_btn"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            >
+
+            <ImageView
+                android:id="@+id/imgshare"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_centerVertical="true"
+                android:src="@drawable/share_item" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@+id/imgshare"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:text="医院授权码"
+                android:textColor="@color/font_left_label"
+                android:textSize="@dimen/sp_16" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right_next_img" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginLeft="@dimen/dp_35"
+            android:background="@color/devider" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/above"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp_48"
+            android:background="@drawable/listselect_btn"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/imgabove"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_centerVertical="true"
+                android:src="@drawable/contect_img" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@+id/imgabove"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:text="联系我们"
+                android:textColor="@color/font_left_label"
+                android:textSize="@dimen/sp_16" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right_next_img" />
+        </RelativeLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginLeft="@dimen/dp_35"
+            android:background="#DDDDDD" />
+
+        <RelativeLayout
+            android:id="@+id/helping"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp_48"
+            android:background="@drawable/listselect_btn"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/imghelping"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_centerVertical="true"
+                android:src="@drawable/helping" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@+id/imghelping"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:text="新手帮助"
+                android:textColor="@color/font_left_label"
+                android:textSize="@dimen/sp_16" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right_next_img" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginLeft="@dimen/dp_35"
+            android:background="#DDDDDD" />
+
+        <RelativeLayout
+            android:id="@+id/pushstting"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp_48"
+            android:background="@drawable/listselect_btn"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/imgpushstting"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_centerVertical="true"
+                android:src="@drawable/xitong_but" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@+id/imgpushstting"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:text="系统设置"
+                android:textColor="@color/font_left_label"
+                android:textSize="@dimen/sp_16" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right_next_img" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/login_out"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/listselect_btn"
+        android:gravity="center"
+        android:text="退出登录"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/blue"
+        android:textSize="18sp" />
+</LinearLayout>

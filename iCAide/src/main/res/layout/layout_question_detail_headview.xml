@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="20dp" >
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+            <TextView
+                android:id="@+id/que_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="为什么天这么蓝"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+            <!--<TextView-->
+                <!--android:id="@+id/que_time"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:paddingBottom="10dp"-->
+                <!--android:text="时间"-->
+                <!--android:textColor="@color/title_gray" />-->
+        <!--</LinearLayout>-->
+
+        <View
+            android:id="@+id/headline"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#efefef" />
+
+        <TextView
+            android:id="@+id/answerContenTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text=""
+            android:textColor="@color/title_gray" />
+
+        <com.deya.hospital.util.ScrollViewIncludeGridView
+            android:id="@+id/imgGv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="2px"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginBottom="10dp"
+            android:numColumns="3" >
+        </com.deya.hospital.util.ScrollViewIncludeGridView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#efefef" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/main_bg" />
+       <LinearLayout
+        android:id="@+id/empertyView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/no_network" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="目前还没有回答哟，赶快去回答吧！"
+            android:textColor="#909090"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

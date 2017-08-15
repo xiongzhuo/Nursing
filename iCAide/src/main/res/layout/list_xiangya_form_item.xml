@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    >
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="3年175例案例，结论"
+            android:maxLines="2"
+            android:padding="2dp"
+            android:textColor="@color/title_gray"
+            android:textSize="14sp" />
+
+
+</LinearLayout>

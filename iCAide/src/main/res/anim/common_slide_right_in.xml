@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+   
+ 
+   
+   
+ 
+    				
+ 
+   
+  
+   IM VIEW
+ -->
+<set android:shareInterpolator="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate android:interpolator="@interpolator/activity_trans_interpolator" android:duration="@integer/activity_trans_duration" android:fromXDelta="100.0%p" android:toXDelta="0.0" />
+</set>

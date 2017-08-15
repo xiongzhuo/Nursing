@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:banner="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:id="@+id/signInTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/dp_5" >
+
+            <ImageView
+                android:id="@+id/falshImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:text="签到"
+                android:textColor="@color/top_color"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:text="工作间"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/devider" />
+    <com.deya.hospital.util.HomePageBanner
+        android:id="@+id/viewPager"
+        banner:bb_scale="0.28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.deya.hospital.util.HomePageBanner>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:text="我的工具"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        />
+
+    <com.deya.hospital.util.ScrollViewIncludeGridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="1dp"
+        android:background="@color/main_bg"
+        android:verticalSpacing="1dp"
+        android:numColumns="4"></com.deya.hospital.util.ScrollViewIncludeGridView>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_marginTop="1dp"
+        android:src="@drawable/plan_pic"/>
+
+    <com.deya.hospital.util.ScrollViewIncludeListView
+        android:id="@+id/projectList"
+        android:layout_width="match_parent"
+        android:dividerHeight="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_height="wrap_content">
+    </com.deya.hospital.util.ScrollViewIncludeListView>
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/white"
+        android:orientation="horizontal"
+       >
+        <RelativeLayout
+            android:id="@+id/rback"
+            android:layout_width="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/btn_back_style" />
+
+            <TextView
+                android:id="@+id/backText"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/img_back"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="@color/top_color"
+                android:textSize="@dimen/sp_16"
+                android:typeface="monospace" />
+        </RelativeLayout>
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_30"
+            android:layout_centerInParent="true"
+            android:background="@drawable/btn_round_blue"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_1">
+
+            <RadioButton
+                android:id="@+id/rb0"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/radio_round_left_blue_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_12"
+                android:text="自查"
+                android:textColor="@color/blue_selector_white_normal"
+                android:textSize="@dimen/sp_18" />
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/dp_1"
+                android:layout_marginRight="@dimen/dp_1"
+                android:background="@drawable/radio_round_center"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_12"
+                android:text="抽查"
+                android:textColor="@color/blue_selector_white_normal"
+                android:textSize="@dimen/sp_18" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/radio_round_right_blue_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_12"
+                android:text="暗访"
+                android:textColor="@color/blue_selector_white_normal"
+                android:textSize="@dimen/sp_18" />
+        </RadioGroup>
+        <TextView
+            android:id="@+id/otherJobTv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="@dimen/sp_18"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:text="暗访"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider" />
+    <TextView
+        android:id="@+id/descriptionTv"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_5"
+        android:background="@color/main_bg"
+        android:layout_height="@dimen/dp_48" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+</LinearLayout>

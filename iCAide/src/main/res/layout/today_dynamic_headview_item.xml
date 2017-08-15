@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:banner="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/isnullLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <com.deya.hospital.util.HorizontalListView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/searchGv"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_130"
+        android:layout_centerInParent="true"
+        android:background="@color/top_color"
+        android:fadingEdgeLength="@dimen/dp_5"
+        android:requiresFadingEdge="horizontal"
+        app:dividerWidth="@dimen/dp_5"></com.deya.hospital.util.HorizontalListView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/improveLay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_10"
+                android:background="@drawable/listselect_btn"
+                android:paddingBottom="@dimen/dp_10"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:src="@drawable/improve_icon_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="改进\n列表"
+                    android:layout_gravity="top"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+
+
+
+        <View
+            android:layout_width="@dimen/dp_3"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@color/main_bg" />
+
+        <LinearLayout
+            android:id="@+id/reportLay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/listselect_btn"
+            android:gravity="center_vertical|right"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:orientation="horizontal"
+          >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="统计\n报表"
+                android:layout_gravity="top"
+                android:layout_marginRight="@dimen/dp_10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16" />
+            <ImageView
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:src="@drawable/reprot_icon" />
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_3"
+            android:background="@color/main_bg" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/checkTaskLay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/listselect_btn"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10">
+
+            <ImageView
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginRight="@dimen/dp_10"
+                android:src="@drawable/checktask" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看\n督导"
+                android:layout_gravity="bottom"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/dp_3"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/main_bg" />
+
+        <LinearLayout
+            android:id="@+id/moreLay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/listselect_btn"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本院\n资料"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="@dimen/dp_10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16" />
+            <ImageView
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:src="@drawable/hospital_document" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </LinearLayout>
+
+        <ImageView
+            android:id="@+id/addTaskLay"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:layout_gravity="center"
+            android:src="@drawable/add_task_selector"/>
+
+    </FrameLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/devider" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerInParent="true"
+                android:text="本月督导"
+                android:gravity="center"
+                android:background="@color/white"
+                android:textColor="#666666"
+                android:textSize="@dimen/sp_18" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/devider" />
+</LinearLayout>

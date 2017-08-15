@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/creatbtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_shape_gray_all_selector"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/lay_add"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/sharp_but_addtask_im"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/plus_img_im" />
+               
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="60dp"
+             android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/lay_add"
+            android:src="@drawable/im_add_bar" />
+    </RelativeLayout>
+
+</LinearLayout>

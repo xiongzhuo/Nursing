@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/fileimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:id="@+id/recorderlayout"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/record_img" >
+
+                <ImageView
+                    android:id="@+id/recordimg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/adj"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/fileimg"
+            android:maxLines="2"
+            android:textSize="13sp"
+            android:textColor="#e7e7e7"
+             />
+
+        <TextView
+            android:id="@+id/size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/fileimg"
+            android:maxLines="2"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/delet"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/sharp_but_delet"
+            android:padding="12dp" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

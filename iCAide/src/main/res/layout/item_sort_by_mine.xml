@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/question_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手卫生有哪些指征？"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/answer_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(0个回答)"
+            android:textColor="#9C9C9C" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
+        android:background="#DDDDDD"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:id="@+id/question_type"
+            android:gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/big_yellow_bg"
+            android:text="手卫生"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/question_ask_or_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的回答"
+            android:textColor="#797979" />
+    </LinearLayout>
+
+    <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#00ff00" /> -->
+
+</LinearLayout>

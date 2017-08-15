@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lay1"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:orientation="vertical" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:text="@string/untime_remark"
+            android:textColor="@color/black"
+               android:background="@color/white"
+            android:textSize="18sp" />
+             <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/greytext" />
+   <ScrollView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+   
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_gray"
+            android:focusable="true"  
+        android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/untime_remark_name_txt"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/big_gray_biankuang"
+                android:gravity="top"
+                android:hint="@string/untime_remark_name_hit"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/greytext" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+           
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/untime_remark_mac"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/greytext" />
+
+            <com.deya.hospital.widget.view.MultipleTextViewGroup
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/main_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               
+                />
+          <!--   
+             app:overspread="true"
+                app:textBackground="@drawable/btn_broad_gray"
+                app:mul_textColor="@color/black"
+                app:textBackground_s="@color/blue_"
+                app:mul_textColor_s="@color/white"
+                app:textLineMargin="2dp"
+                app:textPaddingBottom="10dp"
+                app:textPaddingLeft="10dp"
+                app:textPaddingRight="10dp"
+                app:textPaddingTop="10dp"
+                app:mul_textSize="14sp"
+                android:layout_margin="10dp"
+                app:textWordMargin="2dp"  -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_gray"
+            android:orientation="vertical"
+            >
+ <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/greytext" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/untime_remark_list_txt"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+  <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/greytext" />
+            <ListView
+                android:id="@+id/listivew"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:focusable="true"  
+        android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/untime_remark_write"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edt_remark"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/big_gray_biankuang"
+                android:gravity="top"
+                android:hint="@string/untime_remark_write_hit"
+                android:lines="3"
+                android:textSize="16sp"
+                android:padding="10dp" />
+
+          
+
+            
+        </LinearLayout>
+    </LinearLayout>
+ </LinearLayout>
+    </ScrollView>
+      <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#dbdbdb" />
+         <LinearLayout
+            android:id="@+id/bottomView"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            >
+            
+            <Button
+              android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:background="@drawable/big_lightblue_bg"
+                 android:textSize="18sp"
+                 android:paddingLeft="15dp"
+                 android:paddingRight="15dp"
+                android:textColor="@color/white"
+                 android:text="取\u2000消"
+                android:layout_height="40dp" />
+            <Button
+                 android:id="@+id/btn_enter"
+                android:layout_width="fill_parent"
+                android:gravity="center"
+               android:text="提交数据"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_sharp_orange_selector"
+                android:layout_height="40dp" />
+        </LinearLayout>
+        
+</LinearLayout>

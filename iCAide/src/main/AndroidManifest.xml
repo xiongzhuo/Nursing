@@ -1,0 +1,1195 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.deya.acaide">
+
+    <!-- 允许程序打开网络sockets -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序访问有关的网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问Wi-Fi网络状态信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许应用写（非读）用户的外部存储器 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许读取电话的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许一个程序获取信息有关当前或最近运行的任务，一个缩略的任务状态，是否活动等等 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 允许程序录制音频 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 允许应用程序修改全局声音设置的权限 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- 允许使用PowerManager的WakeLocks保持进程在休眠时从屏幕消失 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 允许请求访问使用照相设备 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- 允许程序连接到已配对的蓝牙设备(非必选,由应用选择是否需要) -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- 允许程序发现和配对蓝牙设备(非必选,由应用选择是否需要) -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- GPS定位权限(非必选，由应用选择是否需要) -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 允许一个程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 允许一个程序访问精良位置(如GPS) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 允许程序读取用户联系人数据(非必选，由应用选择是否需要) -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 允许访问振动设备(非必选,由应用选择是否需要) -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 允许程序禁用键盘锁(非必选,由应用选择是否需要) -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 允许一个程序接收到 ACTION_BOOT_COMPLETED广播在系统完成启动 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />`
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 写入通讯录权限 -->
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+
+        android:name="com.deya.hospital.application.MyAppliaction"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.deya.hospital.base.SplashActivity2"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.deya.hospital.base.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.login.MyRegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize"></activity>
+        <activity
+            android:name="com.example.calendar.CalendarMainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.example.calendar.AddAfterTaskActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.workspace.waste_disposal.WastWorkSpaceActivty"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.workspace.environment.EnviromentWorkActivty"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+
+        <activity
+            android:name="com.deya.hospital.login.FindPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize"></activity>
+        <activity
+            android:name="com.deya.hospital.login.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.login" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.deya.hospital.handwash.NotUpLoadActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.account.SignAcitivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden">
+
+        </activity>
+
+        <activity
+            android:name="com.deya.hospital.quality.QualityFormChooseActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.quality.HospitalDepartRepActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+
+        <activity
+            android:name="com.deya.hospital.quality.ItemDetailActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.quality.QualityPriviewActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.quality.QualityMainActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+        <activity
+            android:name="com.deya.hospital.handwash.DepartDataActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.handwash.ItemDetailActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.handwash.HandFeedbackSupActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.handwash.HandMainActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+
+        <activity
+            android:name="com.deya.hospital.handwash.ItemTimesDetailActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.workcircle.OrganizeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.im.sdk.dy.ui.DyShareActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.deya.hospital.base.DyQrCodeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.deya.hospital.base.DepartChooseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.artifex.mupdfdemo.MuPDFActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensor"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.setting.HospitalListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+        <activity
+            android:name="com.deya.hospital.setting.SettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+
+        <activity
+            android:name="com.deya.hospital.account.UserInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.account.UserInfoEditorActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.account.QualificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+        <activity
+            android:name="com.deya.hospital.setting.NewbieHelpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.setting.DepartSettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.supervisor.CreatPlansAcitivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.dudao.SupvisorMainActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.study.ClassificationExerciseActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.study.StudyMainActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+        <activity
+            android:name="com.deya.hospital.study.ExzanmingShareActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.study.HospitalKnowledgeActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.study.ExaminationPaperActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+        <activity
+            android:name="com.deya.hospital.study.LocalKnowledgePriview"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+        <activity
+            android:name="com.deya.hospital.study.ExzanminPrivewActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+        <activity
+            android:name="com.deya.hospital.study.PripairExamActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+        <activity
+            android:name="com.deya.hospital.study.StudyKnowledgeActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.study.KnowledgeCollectionActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+
+        <activity
+            android:name="com.deya.hospital.descover.QuestionSortActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden" />
+        <activity
+            android:name="com.deya.hospital.descover.AskQustionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden" />
+        <activity
+            android:name="com.deya.hospital.descover.AnswerQuestionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.deya.hospital.supervisor.ChooseDepartActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.supervisor.NewAccomplishTasksActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.supervisor.UnTimeActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.supervisor.UnTime2Activity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name="com.deya.hospital.supervisor.SupervisorFeedBackActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name="com.deya.hospital.supervisor.ReportActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.workcircle.WebViewDtail"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.workcircle.WebViewPDComentl"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.workcircle.WebViewPDF"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.workcircle.WebViewExpertDtail"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.setting.MyCircleCollectionFragment"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.workcircle.CircleSearchActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.supervisor.AddtaskInfoActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.descover.DoucmentListActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.descover.GuidListActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.descover.NeedKnowListActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.descover.KindsActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.util.ShowNetWorkImageActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.descover.SearchActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.supervisor.AddDepartmentActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.supervisor.SupervisionActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.workspace.handwash.HandWashTasksActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.workspace.handwash.HandWashSettingActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize"></activity>
+        <activity
+            android:name="com.deya.hospital.supervisor.SupervisionDetailActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.supervisor.CompletlyWHOTaskActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.setting.ChangeEmailActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.setting.ChangeUsetAccountActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.setting.ContectUsActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.setting.SuggestActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.login.ChangePasswordActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.login.AgreementActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.workcircle.WebViewPDComentl2"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.workcircle.knowledge.KnowLegePrivewActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.workcircle.knowledge.KnowledgeDetailActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.deya.hospital.workcircle.fragment.WorkCiecleChannelActivity"
+            android:label="@string/outline_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+        <!-- 选择本地图片 -->
+        <activity
+            android:name="com.deya.hospital.base.SelectPhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <!-- 选择图片类 -->
+        <activity
+            android:name="com.deya.hospital.base.NewPhotoMultipleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SelectDialog"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.account.AuthorityPhotoDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/SelectDialog"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.setting.MyEditorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.login.CheckCodeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified"></activity>
+        <activity
+            android:name="com.deya.hospital.message.ACMessageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified"></activity>
+        <activity
+            android:name="com.deya.hospital.util.MyWebViewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.util.WebSameActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.util.WebViewDemo"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.util.ReportWebViewDemo"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.setting.SystemSettingsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.setting.AboutActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.setting.AccountSecurityActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.setting.AccountSettingsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.setting.SettingNameActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.message.MessageListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.message.LoadHtmlContentActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.form.FormListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.form.FormListActivity2"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.form.FormSettingActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.form.xy.XiangYaFormSettingActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.form.xy.XyPreViewActivityDetial"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.form.xy.XyFormListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.form.xy.XiangyaPrivewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.form.PreViewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.form.PreViewActivityDetial"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.form.FormSettingPreViewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.form.CreatReviewFormActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.form.FormDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+        <!-- 手卫生消毒消耗量 -->
+        <activity
+            android:name="com.deya.hospital.consumption.ConsumptionFormActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.consumption.EditorConsumptionActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.shop.ScoreRuleActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.shop.SignInActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.descover.DiscoverHtmlContentActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.descover.QuetionClassifyActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.descover.QuetionDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.descover.HospitalKindsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.setting.ShareActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.setting.HospitalShareActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.workspace.tasksearcjh.CheckSupervisorActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.workspace.tasksearcjh.SearchHandTaskActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+        <activity
+            android:name="com.deya.hospital.workspace.priviewbase.ResistantListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.workspace.multidrugresistant.MutiRisitantPriviewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.workspace.threepips.ThreePipsPriviewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+        <activity
+            android:name="com.deya.hospital.workspace.multidrugresistant.AddResistantActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.workspace.threepips.AddTheePipsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.workspace.site_infection.SiteInfectionPriviewAcitivty"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.workspace.site_infection.SiteInfectionCaseActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.workspace.environment.EnvironmentMainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.workspace.KeySectorsFrom.KeySectorsFormActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+        <activity
+            android:name="com.deya.hospital.workspace.environment.EnviromentFormActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.workspace.waste_disposal.WastMainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+        <activity
+            android:name="com.deya.hospital.workspace.waste_disposal.WastFormActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.workspace.other_forms.OtherFormtMainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+        <activity
+            android:name="com.deya.hospital.workspace.other_forms.OtherFormActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.form.handantisepsis.HandDisinfectionPrivewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.form.handantisepsis.HandPreViewActivityDetial"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.form.FormSupervisoryBookAcitivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+        <receiver android:name="com.deya.hospital.util.MyBrodcastReceiver">
+            <intent-filter>
+                <action android:name="com.qlf.broadCastFlag"></action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.deya.hospital.base.BaseDataInitReciever">
+            <intent-filter>
+                <action android:name="com.qlf.broadCastFlag"></action>
+            </intent-filter>
+        </receiver>
+
+        <!-- 分享内容编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize"></activity>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57845426e0f55a397e0014c9"></meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="deyamanda"></meta-data>
+        <!-- 腾讯SSO授权的Activity注册 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1104927749" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+
+        <receiver android:name="com.deya.notification.NotificationReceiver">
+            <intent-filter>
+                <action android:name="com.example.reminderdemo.MyReceiver" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.deya.hospital.MyAlarm"
+            android:process=":remote"></activity>
+        <activity android:name="com.deya.hospital.shop.ShopGoodsListActivity"></activity>
+        <activity android:name="com.deya.hospital.shop.ShopGoodsInfoActivity"></activity>
+        <activity android:name="com.deya.hospital.shop.PrizListActivity"></activity>
+        <activity android:name="com.deya.hospital.shop.VipTipsActivity"></activity>
+
+        <!--        &lt;!&ndash; im start &ndash;&gt;
+                <activity android:name="com.im.sdk.dy.ui.IMFragmentActivity" />
+                &lt;!&ndash; Demo主程序路口 &ndash;&gt;
+                <activity android:name="com.im.sdk.dy.ui.LauncherActivity" />
+                <activity
+                    android:name="com.im.sdk.dy.ui.account.IMSetUpServerActivity"
+                    android:label="@string/login_title_activity"
+                    android:screenOrientation="portrait"
+                    android:theme="@style/AppTheme"
+                    android:windowSoftInputMode="adjustResize|stateHidden" >
+                </activity>
+                -->
+        <!-- 会话消息聊天主界面 -->
+        <activity
+            android:name="com.im.sdk.dy.ui.chatting.ChattingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 联系人详情选项卡 -->
+        <activity
+            android:name="com.im.sdk.dy.ui.contact.ContactDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.im.sdk.dy.ui.contact.GoupMenberDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 手机系统联系人 -->
+        <activity
+            android:name="com.im.sdk.dy.ui.contact.MobileContactActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 发送预览图片 -->
+        <activity
+            android:name="com.im.sdk.dy.ui.chatting.ImagePreviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:process=":tools"
+            android:screenOrientation="portrait"
+            android:theme="@style/CCPTheme.Holo.Transparent" />
+        <activity
+            android:name="com.im.sdk.dy.ui.chatting.VideoRecordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/CCPTheme.Holo.Transparent" />
+        <!-- 查看聊天图片 -->
+        <activity
+            android:name="com.im.sdk.dy.ui.chatting.ImageGalleryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/CCPTheme.Holo.Transparent"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.im.sdk.dy.ui.chatting.ImageGralleryPagerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 文件浏览器 -->
+        <activity
+            android:name="com.im.sdk.dy.ui.plugin.FileExplorerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <!-- 群组 -->
+        <activity
+            android:name="com.deya.hospital.dypdf.DyPdfActivity"
+            android:screenOrientation="sensor"
+            android:theme="@style/ActivityTheme"></activity>
+        <activity
+            android:name="com.im.sdk.dy.ui.group.CreateGroupActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.im.sdk.dy.ui.group.GroupsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 联系人选择 -->
+        <activity
+            android:name="com.im.sdk.dy.ui.contact.ContactSelectListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 手机联系人选择 -->
+        <activity
+            android:name="com.im.sdk.dy.ui.contact.ContactsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.im.sdk.dy.ui.contact.MobileContactSelectActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.im.sdk.dy.ui.group.MobileContactSelectActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.im.sdk.dy.ui.group.DeletfriendActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.im.sdk.dy.ui.group.ECDiscussionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.im.sdk.dy.ui.contact.GroupCardSelectUI"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.im.sdk.dy.ui.group.GroupInfoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 群组搜索 -->
+        <activity
+            android:name="com.im.sdk.dy.ui.group.SearchGroupActivity"
+            android:label="@string/title_activity_search_group"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.im.sdk.dy.ui.group.BaseSearch"
+            android:label="@string/title_activity_search_group"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.im.sdk.dy.ui.settings.EditConfigureActivity"
+            android:label="@string/title_activity_edit_configure"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.im.sdk.dy.ui.group.GroupMemberCardActivity"
+            android:screenOrientation="portrait"></activity>
+        <!-- 申请加入群组 -->
+        <activity
+            android:name="com.im.sdk.dy.ui.group.ApplyWithGroupPermissionActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.im.sdk.dy.ui.group.GroupNoticeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.im.sdk.dy.ui.WorkTipsSettingsActivity"
+            android:label="@string/title_activity_login_setting"
+            android:screenOrientation="portrait" />
+        android:screenOrientation="portrait" />
+        <activity
+            android:name="com.deya.hospital.workspace.safeinjection.safeInjectionActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.deya.hospital.workspace.priviewbase.FormCommitSucTipsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"></activity>
+
+
+        <activity
+            android:name="com.deya.hospital.dypdf.PdfPreviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.im.sdk.dy.ui.contact.AtSomeoneUI"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.im.sdk.dy.ui.contact.ContactMobileAddActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.im.sdk.dy.ui.contact.ContactRemarkActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.im.sdk.dy.ui.TaskTipsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.im.sdk.dy.ui.SearchActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.im.sdk.dy.ui.GKExpertActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.im.sdk.dy.ui.contact.DepartContactsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.im.sdk.dy.ui.GKHelperActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.im.sdk.dy.ui.GKTeamActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.deya.hospital.workspace.stastic.StasticTypeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.deya.hospital.workspace.stastic.FormReportWebView"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.deya.hospital.workspace.stastic.StasticWebView"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.deya.hospital.workspace.supervisorquestion.SupervisorQueCreatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.deya.hospital.workspace.supervisorquestion.SupQuestionListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.deya.hospital.workspace.workspacemain.WorkStasticActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.deya.hospital.workcircle.knowledge.WebDocmentDetail"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.deya.hospital.workspace.supervisorquestion.SupQueTipsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.deya.hospital.workspace.supervisorquestion.SupervisorQesDetitalActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <receiver android:name="com.im.sdk.dy.service.IMNotifyReceiver">
+            <intent-filter>
+                <action android:name="com.im.sdk.ACTION_NOTIRECEIVER_IM"></action>
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.im.sdk.dy.service.DYNotifyService"></service>
+
+        <!-- *****************************ECSDK核心服务类 Start******************************************** -->
+        <service
+            android:name="com.yuntongxun.ecsdk.ECClientService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":push" />
+        <!--提高存活率配置-->
+        <service
+            android:name="com.yuntongxun.ecsdk.ECClientService$InnerService"
+            android:enabled="true"
+            android:process=":push" />
+
+        <receiver
+            android:name="com.yuntongxun.ecsdk.booter.Alarm"
+            android:exported="false"
+            android:process=":push" />
+        <receiver
+            android:name="com.yuntongxun.ecsdk.booter.CCPReceivers$ConnectionReceiver"
+            android:process=":push">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.yuntongxun.ecsdk.booter.CCPReceivers$AlarmReceiver"
+            android:process=":push" />
+
+        <!-- IM 读取日志服务 -->
+        <service android:name="com.deya.hospital.services.LogService">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </service>
+        <service android:name="com.deya.hospital.services.BaseDataInitService">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.deya.notification.AppAstartReciever"
+            android:process=":push" />
+        <receiver
+            android:name="com.im.sdk.dy.service.YuntxNotifyReceiver"
+            android:exported="false">
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.im.sdk.dy.action.VOIP_CALL" />
+                <action android:name="com.im.sdk.dy.action.MESSAGE" />
+                <action android:name="com.im.sdk.dy.action.NOTIFICATION_CLICK" />
+                <action android:name="com.im.sdk.dy.action.PERSON_VERSION" />
+
+                <!-- 这个配置是IM专有的配置，其他应用集成的时候可以忽略 -->
+                <action android:name="com.im.sdk.dy.action.SOFT_UPDATER" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.im.sdk.dy.service.YuntxNotifyReceiver$NotifyService" /><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+    </application>
+
+
+</manifest>

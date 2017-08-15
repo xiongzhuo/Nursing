@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.deya.hospital.util.CommonTopView xmlns:commonTopView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        commonTopView:righttext="编辑"
+        commonTopView:showRight="true"></com.deya.hospital.util.CommonTopView>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:scrollbars="@null">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:text="保存"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:typeface="monospace"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/devider"></View>
+
+            <TextView
+                android:id="@+id/departTv"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="@color/main_bg"
+                android:gravity="center"
+                android:hint="选择科室"
+                android:paddingRight="12dp"
+                android:textColor="@color/top_color"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/devider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="问题类别"
+                    android:textColor="@color/white"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:background="@drawable/tuijian2"
+                    />
+                <TextView
+                    android:id="@+id/question_type"
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:layout_marginLeft="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/list_title"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:background="@color/devider" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发现问题"
+                    android:textColor="@color/white"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:background="@drawable/tuijian2"
+                    />
+                <TextView
+                    android:id="@+id/discover"
+                    android:layout_width="wrap_content"
+                    android:text="被调查人  专职感控人员  2016-11-10"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/list_title"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+
+                android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/big_round_gray_type_style"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="检查内容："
+                    android:textColor="@color/top_color"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+
+                <EditText
+                    android:id="@+id/checkContentEdt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint=""
+                    android:enabled="false"
+                    android:minHeight="60dp"
+                    android:padding="3dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/big_round_gray_type_style"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="发现问题："
+                    android:textColor="@color/top_color"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+
+                <EditText
+                    android:id="@+id/problemEdt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint=""
+                    android:enabled="false"
+                    android:minHeight="60dp"
+                    android:padding="3dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/big_round_gray_type_style"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="处理建议："
+                    android:textColor="@color/top_color"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+
+                <EditText
+                    android:id="@+id/sugesstEdt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint=""
+                    android:minHeight="60dp"
+                    android:padding="3dp"
+                    android:enabled="false"
+                    android:text=""
+                    android:textSize="14sp" />
+            </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="科室确认"
+                    android:textColor="@color/white"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:background="@drawable/tuijian2"
+                    />
+                <TextView
+                    android:id="@+id/departComformer"
+                    android:layout_width="wrap_content"
+                    android:text="被调查人  专职感控人员  2016-11-10"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/list_title"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/reson_sugesstlay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/big_round_gray_type_style"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="原因分析与改进措施："
+                    android:textColor="@color/top_color"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+
+                <EditText
+                    android:id="@+id/reson_sugesstEdt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint="请输入原因分析与改进措施"
+                    android:minHeight="60dp"
+                    android:enabled="false"
+                    android:padding="3dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="再次督导"
+                    android:textColor="@color/white"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:background="@drawable/tuijian2"
+                    />
+                <TextView
+                    android:id="@+id/resupvsionTimeTv"
+                    android:layout_width="wrap_content"
+                    android:text="2016-11-10"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/list_title"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/suggestlay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/big_round_gray_type_style"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="改进效果评价："
+                    android:paddingLeft="3dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/top_color"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+
+                <EditText
+                    android:id="@+id/sugesst_need_change_Edt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint="请输入改进效果评价"
+                    android:minHeight="60dp"
+                    android:padding="3dp"
+                    android:text=""
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_bg"
+                android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/img_headview"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="图片"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="12dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                />
+
+            <com.deya.hospital.util.ScrollViewIncludeGridView
+                android:id="@+id/photoGv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:numColumns="3"></com.deya.hospital.util.ScrollViewIncludeGridView>
+            <TextView
+                android:id="@+id/record_headView"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="语音"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="12dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                />
+            <com.deya.hospital.util.ScrollViewIncludeListView
+                android:id="@+id/recordGv"
+                android:layout_width="fill_parent"
+                android:background="@color/white"
+                android:layout_height="wrap_content"></com.deya.hospital.util.ScrollViewIncludeListView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomView"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <Button
+            android:id="@+id/shareBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:text="分享"
+            android:drawableLeft="@drawable/sup_share"
+            android:textColor="@color/yellow"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/continueBtn"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/big_yellow_bg"
+            android:gravity="center"
+            android:layout_weight="2"
+            android:text="继续"
+            android:textScaleX="1.1"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/sumbmitBtn"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/round_blue_style"
+            android:gravity="center"
+            android:layout_weight="2"
+            android:textScaleX="1.1"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

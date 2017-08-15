@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.deya.hospital.view.EcoGallery
+        android:id="@+id/gallery"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:unselectedAlpha="0.5"
+        android:layout_marginTop="16dp"
+        app:spacing="5dp"
+        app:selectedScale="1.33" />
+
+    <View
+        android:id="@+id/line_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/main_bg" />
+</LinearLayout>

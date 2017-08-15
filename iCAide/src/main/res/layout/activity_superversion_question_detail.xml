@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <com.deya.hospital.util.CommonTopView xmlns:commonTopView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新建问题"
+        commonTopView:righttext="拍照"
+        commonTopView:showRight="true"></com.deya.hospital.util.CommonTopView>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:scrollbars="@null">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:text="保存"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:typeface="monospace"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/departTv"
+                android:layout_width="fill_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:drawableRight="@drawable/right_next_img"
+                android:gravity="center"
+                android:hint="选择科室"
+                android:paddingRight="12dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="问题类别"
+                    android:textColor="@color/white"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="30dp"
+                    android:background="@drawable/tuijian2"
+                    />
+                <TextView
+                    android:id="@+id/queSrc"
+                    android:layout_width="fill_parent"
+                    android:text=""
+                    android:textSize="@dimen/sp_16"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:drawableRight="@drawable/right_next_img"
+                    android:paddingRight="@dimen/dp_10"
+                    android:hint="请选择问题类别"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_height="44dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发现问题"
+                    android:textColor="@color/white"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="30dp"
+                    android:background="@drawable/tuijian2"
+                    />
+                <TextView
+                    android:id="@+id/discover"
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/list_title"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <com.deya.hospital.util.SupervisorEditorLay
+                android:id="@+id/commonEditorLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ></com.deya.hospital.util.SupervisorEditorLay>
+
+
+            <com.deya.hospital.util.SimpleSwitchButton
+                android:id="@+id/feedbackSwitch"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"></com.deya.hospital.util.SimpleSwitchButton>
+
+
+
+            <com.deya.hospital.util.SimpleSwitchButton
+                android:id="@+id/reSupSwitch"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@color/white"></com.deya.hospital.util.SimpleSwitchButton>
+
+            <LinearLayout
+                android:id="@+id/suggestlay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/round_white_style"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="改进效果评价："
+                    android:textColor="@color/top_color"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+
+                <EditText
+                    android:id="@+id/sugesst_need_change_Edt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint="请输入改进效果评价"
+                    android:minHeight="60dp"
+                    android:padding="3dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/timelay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:layout_marginTop="1dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center_vertical"
+                    android:padding="3dp"
+                    android:text="提醒时间:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/timeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/view1"
+                    android:gravity="center_vertical|right"
+                    android:hint="点击设置提醒时间"
+                    android:padding="3dp"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+
+
+
+            <TextView
+                android:id="@+id/img_headview"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="图片"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="12dp"
+                android:textSize="18sp"
+                android:layout_marginBottom="1dp"
+                android:textColor="@color/black"
+                />
+
+            <com.deya.hospital.util.ScrollViewIncludeGridView
+                android:id="@+id/photoGv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:numColumns="3"></com.deya.hospital.util.ScrollViewIncludeGridView>
+            <TextView
+                android:id="@+id/record_headView"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="语音"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="12dp"
+                android:layout_marginBottom="1dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                />
+            <com.deya.hospital.util.ScrollViewIncludeListView
+                android:id="@+id/recordGv"
+                android:layout_width="fill_parent"
+                android:background="@color/white"
+                android:footerDividersEnabled="true"
+                android:layout_height="wrap_content"></com.deya.hospital.util.ScrollViewIncludeListView>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomView"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <Button
+            android:id="@+id/shareBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_sharp_orange_selector"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="分\u2000享"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sumbmitBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_round_sumbmit_bg"
+            android:gravity="center"
+            android:text="提  交"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

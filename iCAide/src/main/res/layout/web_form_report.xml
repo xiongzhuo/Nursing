@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.deya.hospital.util.CommonTopView
+        xmlns:commonTopView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="导读"
+        commonTopView:showRight="false" >
+    </com.deya.hospital.util.CommonTopView>
+
+    <LinearLayout
+        android:id="@+id/topcheckLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/timeTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/supervisor_radio_selector"
+            android:button="@null"
+            android:drawableRight="@drawable/supervisor_radio_right_selector"
+            android:gravity="center"
+            android:hint="时间"
+            android:paddingRight="5dp"
+            android:textColor="@color/top_color"
+            android:textColorHint="@color/top_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/deapartTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/supervisor_radio_selector"
+            android:button="@null"
+            android:drawableRight="@drawable/supervisor_radio_right_selector"
+            android:gravity="center"
+            android:hint="科室"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:text="科室"
+            android:textColor="@color/top_color"
+            android:textColorHint="@color/top_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/identiTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/supervisor_radio_selector"
+            android:button="@null"
+            android:drawableRight="@drawable/supervisor_radio_right_selector"
+            android:gravity="center"
+            android:paddingRight="5dp"
+            android:text="督导身份"
+            android:textColor="@color/top_color"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/keyText"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/supervisor_radio_selector"
+            android:button="@null"
+            android:drawableRight="@drawable/supervisor_radio_right_selector"
+            android:gravity="center"
+            android:paddingRight="5dp"
+            android:text="类型"
+            android:textColor="@color/top_color"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/searchText"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_round_blue_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingRight="5dp"
+            android:text="查询"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/checkPostion"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="14dp"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:src="@drawable/up_arrow"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="14dp"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:src="@drawable/up_arrow"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="14dp"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:src="@drawable/up_arrow"
+                android:visibility="gone" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="14dp"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/iv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:src="@drawable/up_arrow"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider" />
+            <com.deya.hospital.util.LoadingView
+                android:id="@+id/loadingView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="gone" >
+            </com.deya.hospital.util.LoadingView>
+
+            <WebView
+                android:id="@+id/webview_compontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/popparent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider" />
+
+    <LinearLayout
+        android:id="@+id/bottomView"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <Button
+            android:id="@+id/shareBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_sharp_orange_selector"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="分\u2000享"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/emailBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_round_sumbmit_bg"
+            android:gravity="center"
+            android:text="发送邮件"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

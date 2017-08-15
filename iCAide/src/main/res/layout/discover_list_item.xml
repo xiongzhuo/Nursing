@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+    <RelativeLayout
+                android:id="@+id/guizhouLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp" >
+
+                <ImageView
+                    android:id="@+id/imgIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" 
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="贵州省培训基地课件"
+                    android:layout_toRightOf="@id/imgIcon"
+                    android:textColor="@color/font_left_label"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/right_next_img" />
+            </RelativeLayout>
+         <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#ededed" />
+</LinearLayout>

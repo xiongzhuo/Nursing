@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_ui_container"
+    style="@style/NavPage"
+    android:background="@color/white">
+
+    <!--
+    -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_18"
+        android:text="消息"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider"/>
+    <com.im.sdk.dy.common.view.SearchView
+        android:id="@+id/lay_search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/top_layout" />
+
+
+    <ListView
+        android:id="@+id/main_chatting_lv"
+        style="@style/CCPList"
+        android:layout_below="@id/lay_search"
+        android:background="@color/white"
+        android:focusable="true"
+        android:scrollbars="none"
+        android:transcriptMode="disabled" />
+
+    <TextView
+        android:id="@+id/empty_conversation_tv"
+        style="@style/CCPFontEmptyMsgLarge"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:singleLine="false"
+        android:text="@string/main_empty_conversation"
+        android:visibility="gone" />
+    <LinearLayout
+        android:id="@+id/empertyView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/no_network" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="暂无聊天信息！"
+            android:textColor="#909090"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

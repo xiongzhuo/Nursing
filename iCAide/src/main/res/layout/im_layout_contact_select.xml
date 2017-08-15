@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/NavPage"
+    android:orientation="vertical" >
+	<com.im.sdk.dy.common.base.CCPClearEditText
+		android:id="@+id/search_flite"
+		style="@style/CCPLineEditText"
+		android:layout_marginTop="@dimen/NormalPadding"
+		android:background="@drawable/edittext_bg_selector"
+		android:hint="请输入被邀请人信息"
+		android:paddingLeft="10.0dip"
+		android:paddingRight="10.0dip"
+		android:layout_marginLeft="10.0dip"
+		android:layout_marginRight="10.0dip"
+		android:visibility="gone"
+		android:singleLine="true">
+
+		<requestFocus />
+	</com.im.sdk.dy.common.base.CCPClearEditText>
+    <com.deya.hospital.util.HorizontalListView
+ 
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+		android:layout_marginTop="10dp"
+		android:background="@color/white"
+        android:visibility="gone"
+        android:id="@+id/add_listview"></com.deya.hospital.util.HorizontalListView>
+   
+     <LinearLayout
+       android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg"
+    android:orientation="vertical" 
+         >
+
+         <!--  <TextView 
+        android:id="@+id/text_name_t"
+        android:background="@color/main_bg"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:textColor="@color/greytext"
+    	android:padding="10dp"
+    	android:textSize="16sp"
+    	  android:singleLine="true"
+    	android:text="@string/contacts_rname_t"
+        /> -->
+	<View 
+	      android:layout_width="match_parent"
+	      android:layout_height="1dp"
+	      android:background="@color/line"
+	    />
+    <EditText 
+        android:id="@+id/group_name"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="10dp"
+		android:layout_marginTop="10dp"
+    	android:textSize="16sp"
+    	android:singleLine="true"
+    	android:maxLength="16"
+    	android:hint="输入群组名称"
+        />
+<View 
+	      android:layout_width="match_parent"
+	      android:layout_height="1dp"
+	      android:background="@color/line"
+	    />
+  
+    </LinearLayout>
+    
+     
+     <LinearLayout 
+    android:id="@+id/contact_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/NavPage"
+    android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>
+

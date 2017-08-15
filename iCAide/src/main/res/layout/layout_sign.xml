@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/to_sign"></ImageView>
+    <EditText
+        android:id="@+id/phoneTxt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_20"
+        android:hint="请输入邮箱或者电话号码"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_4"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:background="@drawable/round_white_style"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_80"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+<Button
+    android:id="@+id/contectUs"
+    android:layout_width="100dp"
+    android:text="联系我们"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10"
+    android:textColor="@color/black"
+    android:textSize="@dimen/sp_16"
+    android:background="@drawable/round_white_style"
+    android:layout_height="@dimen/dp_40" />
+        <Button
+
+            android:id="@+id/confirm"
+            android:layout_width="100dp"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:enabled="false"
+            android:background="@drawable/btn_round_sumbmit_bg_light_blue"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_height="@dimen/dp_40" />
+
+    </LinearLayout>
+</LinearLayout>
+
+</ScrollView>

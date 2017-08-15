@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ 
+ 	 Use of this source code is governed by a Beijing Speedtong 
+ 	 Information Technology Co.,Ltd license that can be found in the 
+ 	 LICENSE file in the root of the web site.
+ 
+     
+ 
+     
+    
+ 	 IM VIEW
+-->
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="#807f7f7f" />
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <solid android:color="@color/progress_horizontal_green" />
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <solid android:color="@color/progress_horizontal_green" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

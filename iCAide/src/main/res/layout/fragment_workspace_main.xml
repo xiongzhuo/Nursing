@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/top_color">
+
+        <LinearLayout
+            android:id="@+id/signInTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_5">
+
+            <ImageView
+                android:id="@+id/falshImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:text="签到"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_30"
+            android:layout_centerInParent="true"
+            android:background="@drawable/roundconer_white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_1">
+
+            <RadioButton
+                android:id="@+id/radio_frist"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/radio_round_left"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_5"
+                android:text="今日动态"
+                android:textColor="@color/white__selector_blue_normal"
+                android:textSize="@dimen/sp_18" />
+
+            <RadioButton
+                android:id="@+id/radio_second"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/radio_round_right"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_5"
+                android:text="工作分类"
+                android:textColor="@color/white__selector_blue_normal"
+                android:textSize="@dimen/sp_18" />
+        </RadioGroup>
+
+
+        <LinearLayout
+            android:id="@+id/calandarLay"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/calandar_img" />
+
+            <TextView
+                android:id="@+id/staticsImg"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="日历"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <com.deya.hospital.util.ViewpagerIncludScorllview
+        android:id="@+id/order_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

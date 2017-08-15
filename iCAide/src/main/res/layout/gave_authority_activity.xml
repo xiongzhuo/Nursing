@@ -1,0 +1,437 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+
+    <com.deya.hospital.util.CommonTopView xmlns:commonTopView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="用户认证"
+        commonTopView:showRight="false"></com.deya.hospital.util.CommonTopView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/stateLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_waring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_check_waring" />
+
+                <TextView
+                    android:id="@+id/tv_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="认证中"
+                    android:textColor="@color/font_left_label"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_state_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/content_black"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/devider" />
+
+
+            <RelativeLayout
+                android:id="@+id/avatarLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/listselect_btn"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_tipimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="认证照片："
+                    android:textColor="@color/font_left_label"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="150dp"
+                    android:layout_height="120dp"
+                    android:layout_below="@id/tv_tipimg"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_checkimg" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/devider" />
+                <RelativeLayout
+                    android:id="@+id/rel_hospital"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/listselect_btn"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:id="@+id/hospital"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="医院"
+                        android:textColor="@color/list_title"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/hospitalTv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toRightOf="@+id/hospital"
+                        android:background="@null"
+                        android:gravity="center_vertical|right"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+            <RelativeLayout
+                android:id="@+id/rel_name"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/listselect_btn"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/nameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="姓名"
+                    android:textColor="@color/list_title"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/imageView2"
+                    android:layout_toRightOf="@+id/nameTv"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/devider"/>
+            <RelativeLayout
+                android:id="@+id/rel_sex"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/listselect_btn"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/sexTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="性别"
+                    android:textColor="@color/list_title"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/imageView3"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/devider"/>
+            <RelativeLayout
+                android:id="@+id/rel_mobile"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:visibility="gone"
+                android:background="@drawable/listselect_btn"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/textviewphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="电话"
+                    android:textColor="@color/list_title"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/mobileTv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/imageView231"
+                    android:layout_toRightOf="@+id/textviewphone"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:inputType="phone"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageView231"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rel_supervision"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/listselect_btn"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="身份"
+                    android:textColor="@color/list_title"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/supervision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/imageView4"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <RelativeLayout
+                android:id="@+id/defultdepartlay"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/listselect_btn"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="#DDDDDD" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="科室"
+                    android:textColor="@color/list_title"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/defultdeparTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/imageView5"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/devider"/>
+            <RelativeLayout
+                android:id="@+id/rl_email"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/listselect_btn"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="邮箱"
+                    android:textColor="@color/list_title"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/iv_email"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sumbmitlay"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:background="@color/main_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/refuseBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_sharp_orange_selector"
+                    android:text="拒绝"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/accept_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_round_sumbmit_bg"
+                    android:text="认证通过"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:background="@color/main_bg"/>
+            <TextView
+                android:id="@+id/authorName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="12dp"
+                android:background="@color/white"
+                android:textColor="@color/light_yellow"
+                android:textSize="18sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

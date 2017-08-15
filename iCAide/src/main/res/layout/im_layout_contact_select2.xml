@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/NavPage"
+    android:orientation="vertical" >
+    
+    <com.deya.hospital.util.HorizontalListView
+ 
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:visibility="gone"
+        android:id="@+id/add_listview"></com.deya.hospital.util.HorizontalListView>
+    
+     
+     <LinearLayout 
+    android:id="@+id/contact_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/NavPage"
+    android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>
+

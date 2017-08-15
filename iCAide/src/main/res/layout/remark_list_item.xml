@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/text_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="10dp"
+            android:lineSpacingMultiplier="1"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="\u2000院内\u2000护士\u2000里默默\u2000\u2000就撒娇疯狂啦激发肌肤附加就撒娇疯狂啦激发肌肤附加就撒娇疯狂啦激发肌肤附加就撒娇疯狂啦激发肌肤附加就撒娇疯狂啦激发肌肤附加就撒娇疯狂啦激发肌肤附加"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/text_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/big_green_bg"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:text="\u2000院内\u2000护士\u2000里默默\u2000"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

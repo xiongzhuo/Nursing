@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/emperty_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="正在建设中..."
+            android:textColor="@color/list_content"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="客服电话："
+                android:textColor="@color/list_content"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="400-969-7756"
+                android:textColor="@color/blue"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.deya.hospital.util.ScrollViewIncludeGridView
+        android:id="@+id/gv"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="7dp"
+        android:cacheColorHint="@null"
+        android:horizontalSpacing="7dp"
+        android:indicatorLeft="@null"
+        android:listSelector="@drawable/listselect_btn"
+        android:numColumns="3"
+        android:scrollbars="@null"
+        android:verticalSpacing="7dp"></com.deya.hospital.util.ScrollViewIncludeGridView>
+
+
+</LinearLayout>

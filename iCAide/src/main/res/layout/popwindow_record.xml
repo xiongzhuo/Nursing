@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@color/black"
+    android:orientation="vertical" >
+
+ <LinearLayout
+     android:id="@+id/lay1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" />
+    <com.deya.hospital.util.SimpleSwitchButton
+        android:id="@+id/setBtton"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:layout_height="44dp"></com.deya.hospital.util.SimpleSwitchButton>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#e8ecef"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#dbdbdb" />
+
+        <LinearLayout
+            android:id="@+id/photolay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/takephotolay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/img_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tackphoto" />
+
+                <TextView
+                    android:id="@+id/text_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="20dp"
+                    android:text="拍照"
+                    android:textColor="@color/blue_"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:background="#dbdbdb" />
+
+            <LinearLayout
+                android:id="@+id/chooseLocalLay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/img_choose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/local_photo" />
+
+                <TextView
+                    android:id="@+id/text_choose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="20dp"
+                    android:text="从相册中选取"
+                    android:textColor="@color/blue_"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#dbdbdb" />
+
+        <TextView
+            android:id="@+id/stateTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="点击录音"
+            android:textColor="@color/greytext"
+            android:textSize="14sp" />
+
+        <LinearLayout
+          
+            android:id="@+id/recordLay"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round_record_btnbg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="12dp" >
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/start_recordbg"
+                android:gravity="center"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+              android:visibility="gone" 
+            android:id="@+id/playLayout"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round_record_btnbg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/playbtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/play_btn" />
+
+            <com.deya.hospital.util.RoundProgressBar
+                android:id="@+id/playprogress"
+                android:layout_width="90dip"
+                android:layout_height="90dip"
+                android:layout_alignParentBottom="true"
+                android_custom:roundColor="#dbdbdb"
+                android_custom:roundProgressColor="@color/blue_"
+                android_custom:roundWidth="2dip"
+                android_custom:textColor="#ffffff"
+                android_custom:textSize="18sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"
+            android:background="#dbdbdb" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/btn_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消"
+                android:textSize="16sp"
+                android:textColor="@color/blue_" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:background="#dbdbdb" />
+
+            <TextView
+                android:id="@+id/btn_enter"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="确认"
+                android:textColor="@drawable/record_btn_text_style" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

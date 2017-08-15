@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+   
+ 
+   
+   
+ 
+    				
+ 
+   
+  
+   IM VIEW
+ -->
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- <item android:state_enabled="false" android:state_checked="false" android:drawable="@drawable/icon_switch_off" />
+    <item android:state_enabled="false" android:state_checked="true" android:drawable="@drawable/icon_switch_off" />
+    <item android:state_checked="true" android:drawable="@drawable/icon_switch_on" />
+    <item android:drawable="@drawable/icon_switch_off" /> -->
+     <item android:state_enabled="false" android:state_checked="false" android:drawable="@drawable/dynamic_but1" />
+    <item android:state_enabled="false" android:state_checked="true" android:drawable="@drawable/dynamic_but1" />
+    <item android:state_checked="true" android:drawable="@drawable/dynamic_but2" />
+    <item android:drawable="@drawable/dynamic_but1" />
+</selector>

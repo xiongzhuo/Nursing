@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/chatting_time_tv"
+    android:gravity="center_vertical|left"
+    android:paddingLeft="@dimen/dp_10"
+    android:orientation="horizontal"
+    android:paddingRight="@dimen/dp_40">
+
+    <include layout="@layout/im_chatting_item_avatar_from" />
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        style="@style/ChattingUIContent">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/chatting_user_tv"
+                style="@style/ChattingUISenderText"
+                android:visibility="gone" />
+
+            <com.im.sdk.dy.ui.chatting.base.EmojiconTextView
+                android:id="@+id/chatting_content_itv"
+                style="@style/ChattingUIText"
+                android:autoLink="all"
+                android:background="@drawable/chatfrom_bg"
+                android:linksClickable="false"
+                android:maxWidth="225.0dip"
+                android:minHeight="@dimen/ChattingContentMinHeight"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="15.0dip"
+                emojicon:emojiconSize="@dimen/Emoji_icon_size" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/shareLay_chatting"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_15"
+        android:layout_marginLeft="@dimen/dp_100"
+        android:layout_weight="1"
+        android:background="@drawable/round_white_gray_selector"
+        android:gravity="left"
+        android:minWidth="@dimen/dp_130"
+        android:padding="@dimen/dp_12"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/shareImg"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:background="@drawable/share_logo" />
+
+        <TextView
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shareImg"
+            android:text="护理工作间"
+            android:textColor="@color/list_content"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/shareTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/shareImg"
+            android:height="@dimen/dp_40"
+            android:maxLines="2"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textColor="@color/list_title"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/shareContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shareTitle"
+            android:maxLines="2"
+            android:textColor="@color/list_content"
+            android:layout_toRightOf="@+id/shareImg"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+</LinearLayout>

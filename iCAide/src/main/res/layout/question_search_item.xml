@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" 
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="12dp"
+            android:paddingTop="10dp"
+            android:text="手卫生有那些特征"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/answerNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:gravity="center"
+            android:text="(18个回答)"
+            android:textColor="@color/title_gray"
+            android:textSize="15sp" />
+
+</LinearLayout>

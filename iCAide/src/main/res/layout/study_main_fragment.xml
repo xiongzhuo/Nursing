@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:banner="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/isnullLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+    <com.deya.hospital.util.CommonTopView
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:textSize="@dimen/sp_18"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="学习考试"/>
+
+    <com.deya.hospital.util.HomePageBanner
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        banner:bb_scale="0.285">
+    </com.deya.hospital.util.HomePageBanner>
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:verticalSpacing="@dimen/dp_3"
+        android:horizontalSpacing="@dimen/dp_3"
+        android:numColumns="2"></GridView>
+
+
+</LinearLayout>

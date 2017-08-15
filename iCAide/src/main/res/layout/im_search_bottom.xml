@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:nxad="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:id="@+id/lay_wx"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/NormalListHeight"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="@dimen/NormalAvatarWrapSize"
+            android:layout_height="@dimen/NormalAvatarWrapSize"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/SmallPadding"
+            android:layout_marginRight="@dimen/SmallerPadding" >
+            <com.im.sdk.dy.common.view.RoundedImageView
+                android:id="@+id/img_wx"
+                android:layout_width="@dimen/NormalAvatarSize"
+                android:layout_height="@dimen/NormalAvatarSize"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                nxad:corner_radius="5dp"
+                nxad:img="@drawable/im_wx_bar"
+                nxad:oval="false" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="@dimen/SmallPadding"
+            android:layout_marginTop="-1.5dip"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/wx_tv"
+                style="@style/CCPFontTitleInList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:tag="name_tv"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/NormalTextSize" 
+                android:text="查找同仁"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+</LinearLayout>

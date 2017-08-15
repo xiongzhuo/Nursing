@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+<RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@color/top_color" >
+
+ <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="12dp"
+                android:src="@drawable/btn_back_style" />
+
+            <TextView
+                android:id="@+id/backText"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginLeft="-12dp"
+                android:layout_toRightOf="@+id/img_back"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:typeface="monospace" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/message_state"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:text="系统消息"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <!-- <TextView
+            android:id="@+id/aboutTv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:text="关于"
+            android:textColor="@color/white"
+            android:textSize="20sp" /> -->
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_sendtime"
+            style="@style/chat_text_date_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <ImageView
+            android:id="@+id/iv_userhead"
+            android:layout_marginLeft="8dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/xiaoxi_touxiang"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/tv_chatcontent"
+            style="@style/chat_content_date_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_alignTop="@id/iv_userhead"   
+            android:layout_toRightOf="@id/iv_userhead"
+            android:textColor="#000000"
+            android:text="saihdiashdijashdjksahdkjashdkjashkjdahsjkdhk"
+            android:background="@drawable/chatfrom_bg" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            style="@style/chat_text_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/iv_userhead"
+            android:layout_toLeftOf="@id/tv_chatcontent" />
+    </RelativeLayout>
+
+</LinearLayout>

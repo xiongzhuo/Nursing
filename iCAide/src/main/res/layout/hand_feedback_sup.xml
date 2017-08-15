@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.deya.hospital.util.CommonTopView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""></com.deya.hospital.util.CommonTopView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/departmentTv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@color/main_bg"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tuijian2"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="30dp"
+            android:paddingTop="3dp"
+            android:text="发现问题"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/discover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text=""
+            android:textColor="@color/list_title"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/roundconer_gray"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="被反馈对象姓名:"
+            android:textColor="@color/top_color"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/feedNameTex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_bg"
+            android:minHeight="@dimen/dp_80"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/roundconer_gray"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="是否培训过:"
+            android:textColor="@color/top_color"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/isTrainedTex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_bg"
+            android:minHeight="@dimen/dp_80"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/roundconer_gray"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_5">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="手卫生用品设施调查:"
+            android:textColor="@color/top_color"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/facilitiesTex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_bg"
+            android:minHeight="@dimen/dp_80"
+            android:contentDescription="用品设施调查"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/roundconer_gray"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="洗手不规范记录:"
+            android:textColor="@color/top_color"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/unRulesTex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_bg"
+            android:minHeight="@dimen/dp_80"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/roundconer_gray"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="卫生手消毒不规范记录:"
+            android:textColor="@color/top_color"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_bg"
+            android:minHeight="@dimen/dp_80"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+</LinearLayout>
+    </ScrollView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/shareBtn"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:background="@drawable/btn_sharp_orange_selector"
+            android:text="分\u2000享"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>

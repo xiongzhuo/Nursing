@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/networkView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg"
+    android:gravity="center"
+    android:layout_weight="1"
+    android:orientation="vertical" >
+        <ImageView
+            android:id="@+id/falshImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/no_network" />
+
+        <TextView
+            android:id="@+id/empertyText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:hint="亲，您的网络不顺畅哦，\n请检查您的网络，再继续访问！"
+            android:text="亲，您的网络不顺畅哦，\n请检查您的网络，再继续访问！"
+            android:textColor="@color/list_title"
+            android:textSize="16sp" />
+    
+    <Button
+        android:id="@+id/emperty_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="40dp"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_round_sumbmit_bg"/>
+   </LinearLayout>

@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="260dp"
+    android:layout_height="260dp"
+    android:background="@drawable/dialog_sharp"
+    android:orientation="vertical"
+    android:paddingBottom="10dp" >
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@color/top_color"
+        android:gravity="center"
+        android:text="护理工作间应用更新"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/titleTv"
+        android:background="@color/devider" />
+    <TextView
+        android:id="@+id/content"
+        android:layout_below="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="@color/list_title"
+        android:gravity="center"
+        android:text="亲，请耐心等待哦，更新之后将会给您带来更好的体验！"
+        />
+    <LinearLayout
+        android:id="@+id/btn_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressLay"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/downloadbutton"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="继续" />
+
+        <Button
+            android:id="@+id/stopbutton"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:enabled="false"
+            android:text="暂停" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/progressLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dip" />
+
+        <TextView
+            android:id="@+id/resultView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/calcleApp"
+        android:background="@color/devider" />
+
+    <TextView
+        android:id="@+id/calcleApp"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="回到桌面"
+        android:textColor="@color/top_color"
+        android:textSize="16sp" />
+
+</RelativeLayout>

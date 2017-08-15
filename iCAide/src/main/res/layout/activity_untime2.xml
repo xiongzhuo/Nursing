@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lay_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.deya.hospital.util.CommonTopView
+            xmlns:commonTopView="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/topView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="任务统计"
+            commonTopView:righttext="现场反馈"
+            commonTopView:showRight="false" >
+        </com.deya.hospital.util.CommonTopView>
+
+        <include
+            layout="@layout/layout_tipview"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_round_sumbmit_bg"
+        android:padding="10dp"
+        android:text="@string/button_commit"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/btn_commit"
+        android:background="@color/devider" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/line1"
+        android:layout_below="@id/lay_top"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/main_bg" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:gravity="center_vertical"
+                        android:text="@string/untime_survey" />
+
+                    <TextView
+                        android:id="@+id/text_depart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp"
+                        android:gravity="center_vertical"
+                        android:drawableRight="@drawable/img_open"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:text="waik"
+                       android:textSize="18sp"
+                       />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/devider" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="horizontal" >
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/devider" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="@string/untime_time" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/devider" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                       android:layout_height="fill_parent"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/untime_dependence" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/devider" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/untime_correct" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/devider" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                         android:layout_height="fill_parent"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/untime_correct_rate" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/devider" />
+                </LinearLayout>
+    <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@color/devider" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="horizontal" >
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/devider" />
+
+                    <TextView
+                        android:id="@+id/text_time_res"
+                        android:layout_width="0dp"
+                          android:layout_height="fill_parent"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="12" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/devider" />
+
+                    <TextView
+                        android:id="@+id/text_dependence_res"
+                        android:layout_width="0dp"
+                          android:layout_height="fill_parent"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="12" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/devider" />
+
+                    <TextView
+                        android:id="@+id/text_correct_res"
+                        android:layout_width="0dp"
+                          android:layout_height="fill_parent"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="12" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/devider" />
+
+                    <TextView
+                        android:id="@+id/text_rate_res"
+                        android:layout_width="0dp"
+                          android:layout_height="fill_parent"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="12" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/devider" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@color/devider" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_remark"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg"
+                    android:padding="10dp"
+                    android:text="@string/untime_beobserve" />
+
+            </LinearLayout>
+
+            <com.deya.hospital.util.ScrollViewIncludeListView
+                android:id="@+id/listivew_ob"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:listSelector="@color/listselect"
+                android:minHeight="100dp"
+                android:padding="5dp" />
+
+
+            <LinearLayout
+                android:id="@+id/lay_feed_body"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg"
+                    android:padding="10dp"
+                    android:text="@string/untime_feedback_body" />
+
+
+                <TextView
+                    android:id="@+id/text_feed_body"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="15dp"
+                    android:text="xxx xxx xx"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_teach_times"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg"
+                    android:padding="10dp"
+                    android:text="@string/untime_remark_train_txt" />
+
+
+                <TextView
+                    android:id="@+id/text_teach_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="15dp"
+                    android:text="是 三个月内"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_records"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg"
+                    android:padding="10dp"
+                    android:text="@string/untime_record_mac" />
+
+                <TextView
+                    android:id="@+id/text_records"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:lineSpacingExtra="10dp"
+                    android:lineSpacingMultiplier="1"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="15dp"
+                    android:text="xxxx xxxx xxx"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_disinfection"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg"
+                    android:padding="10dp"
+                    android:text="@string/record_disinfection_str" />
+
+                <com.deya.hospital.util.ScrollViewIncludeListView
+                    android:id="@+id/listivew_disinfection"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:listSelector="@color/listselect"
+                    android:minHeight="100dp"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_washhands"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg"
+                    android:padding="10dp"
+                    android:text="@string/record_washhands_str" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+
+                <com.deya.hospital.util.ScrollViewIncludeListView
+                    android:id="@+id/listivew_washhands"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:listSelector="@color/listselect"
+                    android:minHeight="100dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_glove"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg"
+                    android:padding="10dp"
+                    android:text="@string/record_glove_str" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+
+                <com.deya.hospital.util.ScrollViewIncludeListView
+                    android:id="@+id/listivew_glove"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:listSelector="@color/listselect"
+                    android:minHeight="100dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_nothing"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg"
+                    android:padding="10dp"
+                    android:text="@string/record_nothing_str" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+
+                <com.deya.hospital.util.ScrollViewIncludeListView
+                    android:id="@+id/listivew_nothing"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:listSelector="@color/listselect"
+                    android:minHeight="100dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_feed_remark"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg"
+                    android:padding="10dp"
+                    android:text="@string/untime_remark_write_str" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+
+                <TextView
+                    android:id="@+id/text_record_remark"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="xxx xxx xx"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/framlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/translucence"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/guid_text_bg"
+                android:gravity="center"
+                android:text="点击提交按钮"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/arrows_down" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="10dp" >
+
+                <Button
+                    android:id="@+id/btn_commitfram"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/btn_round_sumbmit_bg"
+                    android:padding="10dp"
+                    android:text="@string/button_commit"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

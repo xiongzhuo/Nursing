@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg">
+
+    <com.deya.hospital.util.CommonTopView xmlns:commonTopView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择考核表格"
+        commonTopView:showRight="false" />
+
+    <LinearLayout
+        android:id="@+id/ll_common"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topView"
+        android:layout_marginTop= "12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/round_white_style"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_common"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:drawableRight="@drawable/right_next_img"
+            android:textColor="@color/font_left_label"
+            android:text="护理工作间推荐表格" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/formList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_common"
+        android:cacheColorHint="@null"
+        android:headerDividersEnabled="false"
+        android:divider="@null"
+        android:indicatorLeft="@null"
+        android:listSelector="@drawable/listselect_btn"
+        android:scrollbars="none"
+        />
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:layout_below="@id/ll_common"
+        android:layout_margin="20dp"
+        android:text="您还没有本院表格哟！快去护理工作间通用表格看看吧或拍照上传自定义表格"
+        android:textColor="#909090"
+        android:visibility="gone"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/radio_ques"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
+        android:background="@drawable/add_question_selector"
+        android:text="上传\n表格"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

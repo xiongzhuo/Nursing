@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_gray"
+    android:orientation="vertical" >
+
+    <com.deya.hospital.util.CommonTopView
+        xmlns:commonTopView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="现场反馈"
+        commonTopView:righttext="备注"
+        commonTopView:showRight="false" >
+    </com.deya.hospital.util.CommonTopView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/untime_remark_name_txt"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/edt_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/big_lightblue_biankuang"
+                        android:gravity="top"
+                        android:hint="@string/untime_remark_name_hit"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/untime_remark_train_txt"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/text_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:gravity="center_horizontal"
+                            android:padding="10dp"
+                            android:text="@string/yes"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/img_yes"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_yes_d" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/devider" />
+
+                        <TextView
+                            android:id="@+id/text_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:gravity="center_horizontal"
+                            android:padding="10dp"
+                            android:text="@string/no"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/img_no"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_no_d" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay_times"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical" >
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/devider" />
+
+                    <com.deya.hospital.widget.view.RadioGroupTextView2
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/lay_time_radio"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:viewgroup_columnNum="0"
+                        app:viewgroup_itemmargin="10dp"
+                        app:viewgroup_linemargin="10dp"
+                        app:viewgroup_textBackground="@drawable/sharp_btn_blue"
+                        app:viewgroup_textBackground_s="@drawable/round_orange"
+                        app:viewgroup_textColor="@color/blue_"
+                        app:viewgroup_textColor_s="@color/white"
+                        app:viewgroup_textSize="14sp" />
+
+                    <LinearLayout
+                        android:id="@+id/lay_ftime"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/text_time1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/round_orange"
+                            android:gravity="center_horizontal"
+                            android:padding="5dp"
+                            android:text="@string/untime_time_week_two"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/text_time2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center_horizontal"
+                            android:padding="5dp"
+                            android:text="@string/untime_time_month_one"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/text_time3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center_horizontal"
+                            android:padding="5dp"
+                            android:text="@string/untime_time_month_three"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/text_time4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center_horizontal"
+                            android:padding="5dp"
+                            android:text="@string/untime_time_year_half"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/text_time5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@color/blue_"
+                            android:gravity="center_horizontal"
+                            android:padding="5dp"
+                            android:text="@string/untime_time_year_one"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/untime_remark_mac"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/devider" />
+
+                    <com.deya.hospital.widget.view.MultipleTextViewGroup
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/main_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/white"
+                        app:viewgroup_itemmargin="5dp"
+                        app:viewgroup_itempadding="10dp"
+                        app:viewgroup_linemargin="5dp"
+                        app:viewgroup_overspread="true"
+                        app:viewgroup_select="multiple"
+                        app:viewgroup_textBackground="@drawable/btn_sharp_blue"
+                        app:viewgroup_textBackground_s="@drawable/btn_sharp_orange_selector"
+                        app:viewgroup_textColor="@color/blue_"
+                        app:viewgroup_textColor_s="@color/white"
+                        app:viewgroup_textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/devider" />
+
+                <LinearLayout
+                    android:id="@+id/lay_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_gray"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/text_remarls"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="10dp"
+                            android:text="@string/untime_remark_list_txt"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/white"
+                        android:orientation="vertical" >
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/devider" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="10dp"
+                            android:layout_alignParentBottom="true" >
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="10dp"
+                                android:layout_marginLeft="40dp"
+                                android:src="@drawable/img_san_feedback" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <com.deya.hospital.widget.view.SingleLineTextViewGroup
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/linegroupview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/main_gray"
+                        app:viewgroup_itemmargin="10dp"
+                        app:viewgroup_itempadding="10dp"
+                        android:visibility="gone"
+                        app:viewgroup_textBackground="@drawable/top_round_orange"
+                        app:viewgroup_textBackground_s="@drawable/btn_feedback_record_s"
+                        app:viewgroup_textColor="@color/blue_"
+                        app:viewgroup_textColor_s="@color/white"
+                        app:viewgroup_textSize="14sp" />
+
+                    <RadioGroup
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/main_gray"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        >
+
+                        <RadioButton
+                            android:id="@+id/text_t1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/top_round_orange"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="10dp"
+                            android:singleLine="true"
+                            android:button="@null"
+                            android:checked="true"
+                            android:layout_marginBottom="-1dp"
+                            android:layout_weight="1"
+                            android:text="卫生手消毒"
+                            android:textColor="@color/orange_blue_text_selector"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/text_t2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/top_round_orange"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="10dp"
+                            android:button="@null"
+                            android:layout_weight="1"
+                            android:layout_marginBottom="-1dp"
+                            android:singleLine="true"
+                            android:text="洗手"
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/orange_blue_text_selector"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/text_t3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/top_round_orange"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="10dp"
+                            android:button="@null"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="10dp"
+                            android:singleLine="true"
+                            android:visibility="gone"
+                            android:text="戴手套"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/text_t4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/top_round_orange"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="10dp"
+                            android:singleLine="true"
+                            android:visibility="gone"
+                            android:text="未采取措施"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/text_none"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="没有记录！"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <com.deya.hospital.util.ScrollViewIncludeListView
+                        android:id="@+id/listivew1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@color/white"
+                        android:listSelector="@color/listselect"
+                        android:minHeight="100dp" />
+
+                    <com.deya.hospital.util.ScrollViewIncludeListView
+                        android:id="@+id/listivew2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@color/white"
+                        android:listSelector="@color/listselect"
+                        android:minHeight="100dp"
+                        android:visibility="gone" />
+
+                    <com.deya.hospital.util.ScrollViewIncludeListView
+                        android:id="@+id/listivew3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@color/white"
+                        android:listSelector="@color/listselect"
+                        android:minHeight="100dp"
+                        android:visibility="gone" />
+
+                    <com.deya.hospital.util.ScrollViewIncludeListView
+                        android:id="@+id/listivew4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@color/white"
+                        android:listSelector="@color/listselect"
+                        android:minHeight="100dp"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/main_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/untime_remark_write"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/edt_remark"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/big_lightblue_biankuang"
+                            android:gravity="top"
+                            android:hint="@string/untime_remark_write_hit"
+                            android:minHeight="80dp"
+                            android:padding="10dp"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <com.deya.hospital.util.SimpleSwitchButton
+                    android:id="@+id/feedbackSwitch"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="反馈到科室"
+                    android:background="@color/white"></com.deya.hospital.util.SimpleSwitchButton>
+
+                <com.deya.hospital.util.SimpleSwitchButton
+                    android:id="@+id/reSupSwitch"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="再次督导"
+                    android:background="@color/white"></com.deya.hospital.util.SimpleSwitchButton>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#dbdbdb" />
+
+    <LinearLayout
+        android:id="@+id/bottomView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <Button
+            android:id="@+id/btn_enter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_round_blue_selector"
+            android:padding="10dp"
+            android:text="保存反馈"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

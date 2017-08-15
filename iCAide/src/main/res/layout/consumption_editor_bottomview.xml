@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:paddingBottom="240dp"
+	android:orientation="horizontal"
+	android:layout_height="wrap_content" >
+	<Button
+         android:id="@+id/addBtn" 
+         android:layout_width="fill_parent"
+         android:layout_height="44dp"       
+         android:layout_weight="1"
+         android:text="添加规格"
+         android:layout_marginLeft="20dp"
+         android:textColor="@color/white"
+         android:layout_marginTop="5dp"
+         android:textSize="18sp"
+         android:background="@drawable/btn_round_blue"/>
+	   <Button
+         android:id="@+id/sumbmitBtn" 
+         android:layout_width="fill_parent"
+         android:layout_height="44dp"       
+         android:layout_marginLeft="10dp"
+         android:layout_marginRight="20dp"
+         android:layout_marginTop="5dp"
+         android:text="保存"
+           android:layout_weight="1"
+         android:textColor="@color/white"
+         android:textSize="20sp"
+         android:background="@drawable/addperson_btn"/>
+		
+</LinearLayout>

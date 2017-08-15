@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/main_bg"
+    android:layout_height="match_parent">
+    <com.deya.hospital.util.CommonTopView xmlns:commonTopView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="环境物表清洁"
+        commonTopView:showRight="false" />
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="12dp"
+        android:divider="@color/main_bg"
+        android:dividerHeight="12dp"
+        android:layout_height="wrap_content">
+    </ListView>
+    
+   <!-- <TextView
+        android:id="@+id/operatingRoom"
+        android:layout_width="match_parent"
+        android:background="#00a8cf"
+        android:text="手术室环境卫生常规质量监测"
+        android:textSize="18sp"
+        android:layout_margin="12dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_height="70dp" />
+
+    <TextView
+        android:id="@+id/operatingIcu"
+        android:layout_width="match_parent"
+        android:background="#43A7C7"
+        android:text="ICU环境卫生常规质量监测"
+        android:textSize="18sp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_height="70dp" />
+
+    <TextView
+        android:id="@+id/sickRoom"
+        android:layout_width="match_parent"
+        android:background="#65d0e4"
+        android:text="病房环境卫生常规质量监测"
+        android:textSize="18sp"
+        android:layout_margin="12dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_height="70dp" />-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="0dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:text="使用有疑问？表格与本院内容不一致？\n赶快联系客服吧"
+        android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/sendMessageBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="发消息"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:visibility="gone"
+                android:textColor="@color/top_color"
+                android:background="@drawable/round_blueline_gray_style"/>
+            <Button
+                android:id="@+id/tellTv"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="电话"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/top_color"
+                android:background="@drawable/round_blueline_gray_style"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

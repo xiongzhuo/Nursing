@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/knowlegeType"
+        android:layout_width="fill_parent"
+        android:paddingLeft="@dimen/dp_12"
+        android:textSize="@dimen/sp_16"
+        android:gravity="center_vertical"
+        android:layout_height="@dimen/dp_35" />
+
+    <include
+        layout="@layout/layout_adpter_knoledgecollection" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/pagerList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></ListView>
+
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_round_sumbmit_bg"
+        android:text="提交"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/pagerList"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18" />
+
+    <!--试卷底部-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider" />
+
+    <LinearLayout
+        android:id="@+id/bottm_lay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        >
+
+        <ImageView
+            android:id="@+id/collectImg"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:padding="@dimen/dp_10"
+            android:visibility="gone"
+            android:src="@drawable/shouchang_normal" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:visibility="gone"
+            android:background="@color/devider" />
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:background="@drawable/btn_round_sumbmit_bg"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18" />
+    </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

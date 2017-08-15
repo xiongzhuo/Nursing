@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        
+    <com.deya.hospital.util.CommonTopView
+        xmlns:commonTopView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:text="新手帮助"
+        commonTopView:showRight="false"
+        commonTopView:righttext=""
+        android:layout_height="wrap_content">
+    </com.deya.hospital.util.CommonTopView>
+    
+    <LinearLayout
+        android:id="@+id/networkView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/no_network" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="亲，您的网络不顺畅哦，\n请检查您的网络，再继续访问！"
+            android:textColor="#909090"
+            android:textSize="16sp" />
+    </LinearLayout>
+    
+    <WebView
+        android:id="@+id/webviewHelp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         />
+    
+    
+    
+    </LinearLayout>
+    
+
+</RelativeLayout>

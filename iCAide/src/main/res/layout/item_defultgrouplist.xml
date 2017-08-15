@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <com.deya.hospital.util.ScrollViewIncludeListView
+        android:id="@+id/degultgrouListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="@null"
+        android:dividerHeight="0dp"
+        android:divider="@null" >
+    </com.deya.hospital.util.ScrollViewIncludeListView>
+</LinearLayout>

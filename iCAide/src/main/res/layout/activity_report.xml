@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@color/top_color" >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="24dp"
+            android:layout_height="48dp"
+            android:src="@drawable/btn_back_style" />
+
+        <TextView
+            android:id="@+id/text_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/img_back"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:text="@string/button_back"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:text="@string/title_report"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/text_share"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:text="@string/button_share"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+  <include layout="@layout/layout_tipview" />
+   <com.deya.hospital.widget.web.DYWebView
+       android:id="@+id/webview"
+        android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+       />
+    <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+    <Button
+        android:id="@+id/btn_email"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/btn_round_blue_selector"
+        android:text="@string/button_email"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</LinearLayout>

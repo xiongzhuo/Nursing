@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/commomtop" />
+
+    <TextView
+        android:id="@+id/text_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/shop_yellow_text"
+        android:text="对不起您的橄榄不足\n可以通过以下方式获取橄榄"
+        android:padding="20dp" />
+    <View
+        android:id="@+id/view_top"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider"/>
+    <include layout="@layout/common_network_unconnect" />
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:divider="@null"
+        android:listSelector="@color/white" >
+    </ListView>
+
+</LinearLayout>

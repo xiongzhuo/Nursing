@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+        <com.deya.hospital.util.CommonTopView
+        xmlns:commonTopView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:text="设置"
+        commonTopView:showRight="false"
+        android:layout_height="wrap_content">
+    </com.deya.hospital.util.CommonTopView>
+
+
+    <com.deya.hospital.util.SimpleSwitchButton
+        android:id="@+id/messegeSwitch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="12dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="18dp"
+        android:background="@color/white"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider"/>
+    <com.deya.hospital.util.SimpleSwitchButton
+        android:id="@+id/messegeSwitch2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="12dp"
+        android:paddingLeft="18dp"
+        android:background="@color/white"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider"/>
+    <com.deya.hospital.util.SimpleSwitchButton
+        android:id="@+id/messegeSwitch3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="12dp"
+        android:paddingLeft="18dp"
+        android:background="@color/white"/>
+
+
+
+</LinearLayout>

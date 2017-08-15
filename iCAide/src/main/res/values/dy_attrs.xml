@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <declare-styleable name="dyspinner">
+        <attr name="spimg" format="reference" />
+         <attr name="spbackgroud" format="reference" />
+        <attr name="sptext" format="string" />
+        <attr name="sptextsize" format="dimension"/>
+        <attr name="sptextcolor" format="color" />
+         <attr name="sppadding_l" format="dimension" />
+         <attr name="sppadding_r" format="dimension" />
+         <attr name="sppadding_t" format="dimension" />
+         <attr name="sppadding_b" format="dimension" />
+          <attr name="sppadding" format="dimension" />
+          <attr name="spanim" format="boolean" />
+          <attr name="spangle" format="integer" />
+    </declare-styleable>
+</resources>

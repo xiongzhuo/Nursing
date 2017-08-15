@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_ui_container"
+    style="@style/NavPage"
+    android:background="@color/main_bg" >
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/white"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+
+                <RadioGroup
+                    android:id="@+id/group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/radio_button_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="消息"
+                        android:textColor="@color/firtst_text_selector"
+                        android:textSize="@dimen/sp_18" />
+
+                    <RadioButton
+                        android:id="@+id/two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:background="@drawable/radio_button_selector2"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="通讯录"
+                        android:textColor="@color/firtst_text_selector"
+                        android:textSize="@dimen/sp_18" />
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/text_right1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:src="@drawable/right_arooe" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.im.sdk.dy.common.view.SearchView
+        android:id="@+id/lay_search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_layout" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lay_search" />
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+     >
+    <include layout="@layout/commomtop" />
+
+    <include layout="@layout/common_network_unconnect" />
+
+  <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:cacheColorHint="#00000000"
+            android:divider="#F5F5F5"
+            android:dividerHeight="20dp"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:smoothScrollbar="true"
+             android:scrollbars="@null"
+             android:background="#F5F5F5"
+/>    
+ <View
+      android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+ <LinearLayout 
+     android:id="@+id/lay_tel"
+      android:padding="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+     >
+       <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#B0B0B0"
+        android:text="@string/credit_tel_str"
+        /> 
+        <TextView 
+            android:id="@+id/text_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/top_color"
+        android:text="@string/credit_tel"
+        />
+ </LinearLayout>
+  
+    
+</LinearLayout>

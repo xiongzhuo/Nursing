@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+ <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#ededed" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+       >
+
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_80"
+            android:padding="@dimen/dp_10"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:id="@+id/guizhouLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+          >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center_vertical"
+                android:text="贵州省培训基地课件"
+                android:textColor="@color/font_left_label"
+                android:textSize="@dimen/sp_18" />
+
+            <TextView
+                 android:id="@+id/pickupNum"
+               
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center_vertical"
+                android:text="贵州省培训基地课件"
+                android:textColor="@color/font_left_label"
+                android:textSize="@dimen/sp_14" />
+              <TextView
+                android:id="@+id/storeNum"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center_vertical"
+                android:text="贵州省培训基地课件"
+                android:textColor="@color/font_left_label"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+          <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:src="@drawable/right_next_img" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#ededed" />
+
+</LinearLayout>

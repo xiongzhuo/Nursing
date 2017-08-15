@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <meta name="apple-mobile-web-app-capable" content="no">
+                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+                <title>督导统计</title>
+                __BODY__
+                <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+                
+                <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+  <body>
+  <div class="menu">
+      <ul>
+          <li class="menu_chart">报表</li>
+            <li class="menu_feedback">现场反馈</li>
+            <li class="menu_remark">附件</li>
+        </ul>
+    </div>
+    
+  <div class="chart" style="display:block;">
+   <p class="department"></p>
+    <div class="summary grid">
+        <table style="margin-left:0px;">
+            <thead class="title">
+                <tr>
+                <th style="width: 20%">整体统计</th>
+                <th style="width: 15%">时机</th>
+                <th style="width: 20%">手卫生次数</th>
+                <th style="width: 15%">依从性</th>
+                <th style="width: 15%">正确数</th>
+                <th style="width: 20%">正确率</th> 
+                </tr>
+            </thead>
+
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>  
+
+  <p class="info-title">岗位依从性、正确率</p>
+  <div id="main2" style="height:300px"></div>
+  <div class="ppost grid">
+      <table>
+          <thead class="title1">
+              <tr>
+                  <th style="width: 25%">岗位</th>
+                  <th style="width: 15%">时机</th>
+                  <th style="width: 20%">手卫生次数</th>
+                  <th style="width: 15%">依从性</th>
+                  <th style="width: 15%">正确数</th>
+                  <th style="width: 20%">正确率</th>
+              </tr>
+          </thead>
+          
+          <tbody>
+          </tbody>
+      </table>
+  </div>
+
+  <p class="info-title">指征依从性、正确率</p>
+  <div id="main3" style="height:400px"></div>
+    <div class="detail grid">
+        <table>
+            <thead class="title1">
+                <tr>
+                <th style="width: 25%">指征</th>
+                <th style="width: 15%">时机</th>
+            <th style="width: 20%">手卫生次数</th>
+                <th style="width: 15%">依从性</th>
+                <th style="width: 15%">正确数</th>
+                <th style="width: 20%">正确率</th> 
+                </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+
+  <p class="info-title">手卫生方式构成(上图)、正确率(下表)</p>
+  <div id="main4" style="height:300px"></div>
+  <div class="washtype-detail grid">
+    <table>
+      <thead class="title1">
+        <tr>
+        <th style="width: 25%">洗手方式</th>
+        <th style="width: 20%">手卫生次数</th>
+        <th style="width: 15%">正确数</th>
+        <th style="width: 15%">正确率</th>
+        <th style="width: 20%">不规范数</th> 
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="info-title">被观察者岗位比例(上图)，个人依从率、正确率(下图)</p>
+  <div id="main" style="height:300px"></div>
+  <div class="person-detail grid">
+    <table>
+      <thead class="title1">
+        <tr>
+        <th style="width: 25%">人员</th>
+        <th style="width: 15%">时机</th>
+        <th style="width: 20%">手卫生次数</th>
+        <th style="width: 15%">依从性</th>
+        <th style="width: 15%">正确数</th>
+        <th style="width: 20%">正确率</th> 
+        </tr>
+      </thead>
+
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  
+  <!-- 反馈详情 -->
+  <div class="feedback" style="display:none;">
+  <p class="department"></p>
+  <p class="title">被反馈对象姓名</p>
+  <p class="feedback_name name">
+      <span>无记录</span>
+  </p>
+  
+  
+  <p class="title">是否培训</p>
+  <p class="feedback_name">
+      <span class="istraning">无记录</span>
+      <span class="training_recycle_name"></span>
+  </p>
+  
+  <p class="title">手卫生用品与设施调查</p>
+  <p class="feedback_name ee">
+  </p>
+
+
+      <p class="title">洗手不规范记录</p>
+      <div class="unruler4">
+          <p class="feedback_name">无记录</p>
+          <div class="record_main">
+
+          </div>
+
+      </div>
+      <p class="title">卫生手消毒不规范记录</p>
+      <div class="unruler5">
+          <p class="feedback_name">无记录</p>
+          <div class="record_main">
+
+          </div>
+      </div>
+      <p class="title">戴手套不规范记录</p>
+      <div class="unruler6">
+          <p class="feedback_name">无记录</p>
+          <div class="record_main">
+
+          </div>
+      </div>
+
+
+  <p class="title">反馈记录</p>
+  <p class="feedback_name records">无记录</p>
+</div>
+  
+  <div class="remark" style="display:none;">
+  <p class="department" ></p>
+  <p class="title">照片</p>
+  <div class="pics">
+      <p class="feedback_name">未上传照片</p>
+  </div>
+  <p class="title">录音</p>
+  <p class="records">
+      <p class="feedback_name" id="null_audio">未上传录音</p>
+  </p>
+  </div>
+
+    <!-- ECharts单文件引入 -->
+    <script type="text/javascript" src="js/echarts/echarts.js"></script>
+    <script type="text/javascript" src="js/attachments.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+</body>
+</html>

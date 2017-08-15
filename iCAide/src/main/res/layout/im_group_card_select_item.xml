@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+   
+ 
+   
+   
+ 
+    				
+ 
+   
+  
+   IM VIEW
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ContactListHeight"
+        android:background="@drawable/comm_list_item_selector" >
+
+        <ImageView
+            android:id="@+id/group_card_item_avatar_iv"
+            android:layout_width="@dimen/ContactAvatarSize"
+            android:layout_height="@dimen/ContactAvatarSize"
+            android:background="#d5d5d5"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/group_card_item_nick"
+            style="@style/CCPFontTitleInList"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="left|center"
+            android:maxWidth="180.0dip"
+            android:paddingLeft="@dimen/SmallPadding"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/group_card_item_count_tv"
+            style="@style/CCPFontTimeInList"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="left|center"
+            android:textColor="@color/hint_text_color" />
+    </LinearLayout>
+
+</LinearLayout>

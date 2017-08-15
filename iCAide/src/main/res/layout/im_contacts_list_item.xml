@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:nxad="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contact_item_ll"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/contactitem_catalog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/SmallerPadding"
+        android:paddingLeft="@dimen/SmallPadding"
+        android:paddingTop="@dimen/SmallerPadding"
+        android:textColor="@color/content_black"
+        android:textSize="@dimen/HintTextSize"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/NormalListHeight"
+        android:background="@drawable/listselect_btn"
+        android:minHeight="@dimen/NormalListHeight"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/contactitem_select_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/chekbox_selector"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/NormalAvatarWrapSize"
+            android:layout_height="@dimen/NormalAvatarWrapSize"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/SmallPadding"
+            android:layout_marginRight="@dimen/SmallerPadding" >
+
+            <com.im.sdk.dy.common.view.RoundedImageView
+                android:id="@+id/avatar_iv"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                nxad:corner_radius="50dp"
+                nxad:oval="false" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="@dimen/SmallPadding"
+            android:layout_marginTop="-1.5dip"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.im.sdk.dy.ui.chatting.base.EmojiconTextView
+                    android:id="@+id/name_tv"
+                    style="@style/CCPFontTitleInList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="name_tv"
+                    android:textColor="@color/normal_text_color"
+                    android:textSize="@dimen/NormalTextSize" />
+
+                <TextView
+                    android:id="@+id/jop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/content_black"
+                    android:textSize="14.0sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/account"
+                style="@style/CCPFontTipInList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.5dip"
+                android:ellipsize="end"
+                android:gravity="left|center"
+                android:tag="account"
+                android:text="account"
+                android:textColor="@color/content_black"
+                android:textSize="14.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="68dp"
+            android:layout_height="1dp"
+            android:background="@color/white" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/devider" />
+    </LinearLayout>
+
+</LinearLayout>

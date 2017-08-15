@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:id="@+id/typeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/circle_4"
+            android:paddingBottom="1dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="1dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="3dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text=" "
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/priviewImg"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/adv1"
+        android:visibility="gone"
+        android:layout_height="@dimen/dp_200" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider" />
+
+    <ListView
+        android:id="@+id/pagerList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></ListView>
+
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_round_sumbmit_bg"
+        android:text="确 认"
+        android:visibility="gone"
+        android:enabled="false"
+        android:layout_marginBottom="@dimen/dp_48"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/geren_bg"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_20">
+<ImageView
+    android:id="@+id/my_set"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:layout_margin="@dimen/dp_10"
+    android:src="@drawable/me_set"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_toLeftOf="@+id/ganlanRight"
+                android:gravity="center"
+                android:padding="2dp"
+                android:shadowDx="5"
+                android:shadowDy="0"
+                android:text="8888"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_90"
+                android:layout_gravity="center_horizontal">
+
+
+                <com.deya.hospital.util.CircleImageView
+                    android:id="@+id/owner_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:src="@drawable/men_defult"
+                    app:border_color="@color/white"
+                    app:border_width="2dp" />
+
+                <ImageView
+                    android:id="@+id/sexImg"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ico_man" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dealLay"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_48"
+                android:background="@drawable/left_round_light_black"
+                android:gravity="center_vertical"
+                android:alpha="100"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_weight="1"
+                >
+                <ImageView
+                    android:id="@+id/imgganlan"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:src="@drawable/shop_img"/>
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:gravity="center_vertical"
+                    android:text="我的兑换"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_toRightOf="@+id/imgganlan"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nicheng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:shadowColor="#40000000"
+                android:shadowDx="5"
+                android:shadowDy="0"
+                android:text="张三"
+                android:textColor="@color/white"
+                android:textScaleX="1.2"
+                android:textSize="@dimen/sp_18" />
+
+            <ImageView
+                android:id="@+id/img_state"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/not_authented" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/jobs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowDx="5"
+            android:shadowDy="0"
+            android:text="主任"
+            android:layout_margin="3dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/hospital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="中南大学湘雅医院"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <ImageView
+                android:id="@+id/vip_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/not_vip"
+               />
+        </LinearLayout>
+    </LinearLayout>
+  <com.deya.hospital.util.PagerTab
+      android:id="@+id/indicator"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/dp_48">
+  </com.deya.hospital.util.PagerTab>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2.5dip"
+        android:background="@drawable/jianbianline"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+</LinearLayout>

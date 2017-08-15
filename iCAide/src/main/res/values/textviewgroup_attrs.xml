@@ -1,0 +1,84 @@
+<resources>
+<!-- 自定义 textview——group控件属性 -->
+    <declare-styleable name="TextViewGroup">
+        <attr name="viewgroup_textSize" format="dimension" />
+        <attr name="viewgroup_itemmargin" format="dimension" />
+        <attr name="viewgroup_linemargin" format="dimension" />
+        <attr name="viewgroup_itempadding" format="dimension" />
+        <attr name="viewgroup_textBackground" format="reference" />
+        <attr name="viewgroup_textColor" format="color" />
+        <attr name="viewgroup_textBackground_s" format="reference" />
+        <attr name="viewgroup_textColor_s" format="color" />
+        <attr name="viewgroup_columnNum" format="integer" />
+        <attr name="viewgroup_overspread" format="boolean" />
+        <attr name="viewgroup_shape">
+            <enum name="square" value="0" />
+            <enum name="rectangle" value="1" />
+            <enum name="rectangle_half" value="2" />
+            <enum name="rectangle_third" value="3" />
+        </attr>
+        <attr name="viewgroup_select">
+            <enum name="radio" value="0" />
+            <enum name="multiple" value="1" />
+            <enum name="radio_empty" value="2" />
+        </attr>
+    </declare-styleable>
+<!-- 
+    等比宽高textview
+    <declare-styleable name="RadioTextViewGroup">
+        <attr name="radio_textSize" format="dimension" />
+        <attr name="radio_itemmargin" format="dimension" />
+        <attr name="radio_linemargin" format="dimension" />
+        <attr name="radio_textBackground" format="reference" />
+        <attr name="radio_textColor" format="color" />
+        <attr name="radio_textBackground_s" format="reference" />
+        <attr name="radio_textColor_s" format="color" />
+        <attr name="radio_columnNum" format="integer" />
+        <attr name="radio_shape">
+            <enum name="square" value="0" />
+            <enum name="rectangle" value="1" />
+            <enum name="rectangle_half" value="2" />
+            <enum name="rectangle_third" value="3" />
+        </attr>
+        <attr name="radio_select">
+            <enum name="radio" value="0" />
+            <enum name="multiple" value="1" />
+            <enum name="radio_empty" value="2" />
+        </attr>
+    </declare-styleable>
+
+    自动换行自适应textview
+    <declare-styleable name="MultipleTextViewGroup">
+        <attr name="mul_textSize" format="dimension" />
+        <attr name="textWordMargin" format="dimension" />
+        <attr name="textLineMargin" format="dimension" />
+        <attr name="textBackground" format="reference" />
+        <attr name="mul_textColor" format="color" />
+        <attr name="textBackground_s" format="reference" />
+        <attr name="mul_textColor_s" format="color" />
+        <attr name="textPaddingLeft" format="dimension" />
+        <attr name="textPaddingRight" format="dimension" />
+        <attr name="textPaddingTop" format="dimension" />
+        <attr name="textPaddingBottom" format="dimension" />
+        <attr name="overspread" format="boolean" />
+        <attr name="columnNum" format="integer" />
+    </declare-styleable>
+
+    单行 自适应 textview
+    <declare-styleable name="SingleLineTextViewGroup">
+        <attr name="single_textSize" format="dimension" />
+        <attr name="single_itemmargin" format="dimension" />
+        <attr name="single_itempadding" format="dimension" />
+        <attr name="single_textBackground" format="reference" />
+        <attr name="single_textColor" format="color" />
+        <attr name="single_textBackground_s" format="reference" />
+        <attr name="single_textColor_s" format="color" />
+        <attr name="single_ismultiple" format="boolean" />
+        <attr name="single_select">
+            <enum name="radio" value="0" />
+            <enum name="multiple" value="1" />
+            <enum name="radio_empty" value="2" />
+        </attr>
+    </declare-styleable>
+ -->
+</resources>

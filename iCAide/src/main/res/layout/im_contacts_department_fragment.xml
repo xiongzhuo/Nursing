@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contact_fragment"
+    style="@style/NavPage" >
+    <com.deya.hospital.util.CommonTopView
+        android:id="@+id/topView"
+        android:layout_width="fill_parent"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        android:layout_height="@dimen/dp_48">
+    </com.deya.hospital.util.CommonTopView>
+    <ListView
+        android:id="@+id/address_contactlist"
+        style="@style/CCPList"
+        android:focusable="true"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:scrollbars="none"
+        android:divider="@color/devider"
+        android:dividerHeight="1px"
+        android:transcriptMode="disabled" />
+    <include layout="@layout/im_tab_loading_area" />
+
+</LinearLayout>

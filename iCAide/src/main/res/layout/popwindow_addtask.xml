@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/translucence"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lay1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp" >
+
+                <TextView
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/devider"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/add_task"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/calendar_opration_hint_middle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/translucence"
+                android:orientation="vertical"
+                android:visibility="gone" >
+            </LinearLayout>
+        </FrameLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#dbdbdb" />
+
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/devider"
+            android:gravity="center" />
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/whoTv"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="WHO手卫生观察(基本版)
+"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/Handhygiene"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="WHO手卫生观察(详细版)"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/devider"
+                android:visibility="gone"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/consumptionTv"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="手卫生消毒消耗量"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/devider"
+                 android:visibility="gone"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/totallyTaskTv"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="WHO手卫生观察(定制版)"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+   <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/devider"
+                android:gravity="center" />
+         <TextView
+                android:id="@+id/surgicalFromTv"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="外科手卫生操作考核"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/devider"
+                android:gravity="center"
+                android:visibility="visible" />
+            <TextView
+                android:id="@+id/xiangyaFromTv"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="湖南省医院感染管理临床质控"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/devider"
+                android:gravity="center" />
+
+   
+
+            <TextView
+                android:id="@+id/reviewForm"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="医院感染临床质控"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/devider"
+                android:gravity="center"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/SupervisionTv"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="通用督导本"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/calendar_opration_hint_down"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/translucence"
+            android:orientation="vertical"
+            android:visibility="gone" >
+        </LinearLayout>
+
+</LinearLayout>

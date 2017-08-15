@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <com.deya.hospital.util.CommonTopView
+        android:id="@+id/topView"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_48">
+    </com.deya.hospital.util.CommonTopView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/devider" />
+
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/planlist"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@null"
+        android:divider="@null"
+        android:indicatorLeft="@null"
+        android:listSelector="@drawable/listselect_btn"
+        android:scrollbars="@null"
+        >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+</LinearLayout>

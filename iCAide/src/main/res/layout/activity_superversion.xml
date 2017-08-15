@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/commomtop" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="@null" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:text="保存"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:typeface="monospace"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/devider" >
+            </View>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_bg"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="20dp" >
+
+                <LinearLayout
+                    android:id="@+id/photoLay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/sharp_but_addphoto" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-10dp"
+                        android:text="上传图片/拍照" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/recordLay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/sharp_but_addrecord" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-10dp"
+                        android:text="按住说话" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/devider" />
+
+              <RelativeLayout
+                android:id="@+id/departRelay"
+                android:layout_width="fill_parent"
+                android:background="@color/white"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/departTv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/big_blue_radius_biankuang"
+                    android:drawableRight="@drawable/job_down"
+                    android:gravity="center"
+                    android:hint="选择科室"
+                    android:layout_margin="10dp"
+                    android:drawablePadding="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/top_color"
+                    android:textColorHint="@color/top_color"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <com.deya.hospital.util.ScrollViewIncludeGridView
+                android:id="@+id/photoGv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="3" >
+            </com.deya.hospital.util.ScrollViewIncludeGridView>
+
+            <com.deya.hospital.util.ScrollViewIncludeListView
+                android:id="@+id/recordGv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </com.deya.hospital.util.ScrollViewIncludeListView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/devider" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="检查内容："
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/checkContentEdt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/big_light_blue_biankuang"
+                android:hint="请输入检查内容"
+                android:minHeight="60dp"
+                android:padding="3dp"
+                android:text=""
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="发现问题："
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/problemEdt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/big_light_blue_biankuang"
+                android:hint="请输入发现的问题"
+                android:minHeight="60dp"
+                android:padding="3dp"
+                android:text=""
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="处理建议："
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/sugesstEdt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/big_light_blue_biankuang"
+                android:hint="请输入处理建议"
+                android:minHeight="60dp"
+                android:padding="3dp"
+                android:text=""
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/timesLay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center_vertical"
+                        android:padding="3dp"
+                        android:text="在指定日期提醒我"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/switchBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/dynamic_but2" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+
+                <RelativeLayout
+                    android:id="@+id/timelay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/view1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center_vertical"
+                        android:padding="3dp"
+                        android:text="提醒时间:"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/timeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_toRightOf="@+id/view1"
+                        android:gravity="center_vertical|right"
+                        android:hint="点击设置提醒时间"
+                        android:padding="3dp"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/sumbmitBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="44dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_round_blue"
+                android:gravity="center"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

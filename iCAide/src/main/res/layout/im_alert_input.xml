@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+   
+ 
+   
+   
+ 
+    				
+ 
+   
+  
+   IM VIEW
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/LargePadding" >
+
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_bar_bg_active"
+        android:inputType="text"
+        android:maxLength="128"
+        android:padding="@dimen/BasicPaddingSize"
+        android:singleLine="false"
+        android:textColor="@color/normal_text_color"
+        android:textColorHint="@color/hint_text_color_dark_bg"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/NormalTextSize" />
+
+    <TextView
+        android:id="@+id/tips_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/SmallPadding"
+        android:textColor="@color/hint_text_color"
+        android:textSize="@dimen/SmallerTextSize" />
+
+</LinearLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/searchImg"
+            android:layout_toRightOf="@+id/img_back"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/round_search_gray_btn"
+            android:orientation="horizontal" >
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/search_icon" />
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:hint="请输入专家、文章"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="3dp"
+                android:layout_toRightOf="@+id/icon"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/title_gray"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/clear"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:padding="4dp"
+                android:src="@drawable/search_delet" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/searchImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="取消"
+            android:textColor="@color/blue"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1.5px"
+        android:layout_below="@id/relativeLayout1"
+        android:background="@color/devider" >
+    </View>
+
+    <ScrollView android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:id="@+id/searchView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:text="热门搜索"
+                android:textColor="#d8d8d8"
+                android:textSize="18sp" />
+
+            <com.deya.hospital.widget.view.ButtonTextViewGroup
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/hotRadio"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                app:viewgroup_itemmargin="5dp"
+                app:viewgroup_itempadding="10dp"
+                app:viewgroup_linemargin="5dp"
+                app:viewgroup_overspread="true"
+                app:viewgroup_select="radio"
+                app:viewgroup_textBackground="@drawable/round_search_gray_btn"
+                app:viewgroup_textBackground_s="@drawable/round_grey_btn"
+                app:viewgroup_textColor="@color/gray"
+                app:viewgroup_textColor_s="@color/white"
+                app:viewgroup_textSize="14sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.5px"
+                android:background="#ededed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:text="历史搜索"
+                android:textColor="#d8d8d8"
+                android:textSize="18sp" />
+
+            <com.deya.hospital.util.ScrollViewIncludeListView
+                android:id="@+id/listView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:listSelector="@color/white" >
+            </com.deya.hospital.util.ScrollViewIncludeListView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

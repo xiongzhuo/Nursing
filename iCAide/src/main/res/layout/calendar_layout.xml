@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/weeks"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- Cashes them at first start -->
+
+    <include layout="@layout/week_layout" />
+
+    <include layout="@layout/week_layout" />
+
+    <include layout="@layout/week_layout" />
+
+    <include layout="@layout/week_layout" />
+
+    <include layout="@layout/week_layout" />
+
+    <include layout="@layout/week_layout" />
+    
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/commomtop" />
+   <LinearLayout
+        android:id="@+id/creatLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_white_style"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/creatbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:src="@drawable/sharp_but_addreview" >
+        </ImageView>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/formList"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@null"
+        android:divider="@color/main_bg"
+        android:layout_marginTop="10dp"
+        android:dividerHeight="10dp"
+        android:indicatorLeft="@null"
+        android:listSelector="@drawable/listselect_btn"
+        android:scrollbars="@null" >
+    </ListView>
+
+</LinearLayout>

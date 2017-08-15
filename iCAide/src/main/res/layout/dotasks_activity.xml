@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/btn_back_style"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/backText"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_toRightOf="@+id/img_back"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:text="返回"
+                android:layout_marginLeft="3dp"
+                android:textColor="@color/top_color"
+                android:textSize="16sp"
+                android:typeface="monospace" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/typeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/titleTv"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="center"
+                    android:textColor="@color/top_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/titleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/moreTv"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="center_vertical"
+                    android:text="选择洗12133123"
+                    android:textColor="#ff9c4b"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/moreTv"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="拍照"
+                android:textColor="@color/top_color"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/devider" >
+        </View>
+
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="700dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/departTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/white"
+                        android:gravity="center" />
+
+                    <HorizontalScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:fillViewport="true"
+                        android:gravity="right" >
+
+                        <LinearLayout
+                            android:id="@+id/jobTimesListView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="24dp"
+                            android:layout_marginLeft="10dp"
+                            android:divider="#ffffff"
+                            android:gravity="right"
+                            android:orientation="horizontal" >
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="2dp" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <com.deya.hospital.util.HorizontalListView
+                            android:id="@+id/personlistView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="70dp"
+                            android:layout_centerInParent="true"
+                            android:divider="#ffffff"
+                            android:fadingEdgeLength="5dp"
+                            android:requiresFadingEdge="horizontal"
+                            app:dividerWidth="5dp" >
+                        </com.deya.hospital.util.HorizontalListView>
+
+                        <TextView
+                            android:id="@+id/pointTv"
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/blue_point_up"
+                            android:visibility="gone" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="2px"
+                            android:background="@color/blue_"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2px"
+                            android:orientation="horizontal"
+                            android:visibility="gone" >
+
+                            <Button
+                                android:id="@+id/nameBtn"
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_weight="2"
+                                android:background="@drawable/big_lightblue_biankuang"
+                                android:gravity="center"
+                                android:text="点击修改姓名"
+                                android:textSize="15sp" />
+
+                            <RelativeLayout
+                                android:id="@+id/joblayout"
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/big_lightblue_biankuang"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:visibility="gone" >
+
+                                <TextView
+                                    android:id="@+id/jobTv"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_toLeftOf="@+id/open"
+                                    android:gravity="center_vertical"
+                                    android:hint="岗位" />
+
+                                <ImageView
+                                    android:id="@+id/open"
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="left|bottom"
+                                    android:background="@drawable/job_down" />
+                            </RelativeLayout>
+
+                            <com.deya.hospital.widget.view.DySpinner
+                                android:id="@+id/dySpinner"
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_weight="1"
+                                app:spbackgroud="@drawable/big_lightblue_biankuang"
+                                app:sppadding_l="10dp"
+                                app:sppadding_r="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/addButton"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/big_yellow_biankuang"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:text="点击添\n加被观\n察对象"
+                        android:textColor="#ff9035"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="75dp"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:id="@+id/personGroup"
+                        android:layout_width="10000dp"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/main_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="选择指征"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/person"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="被调查人:A"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <com.deya.hospital.util.ScrollViewIncludeListView
+                        android:id="@+id/typelistView"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.3"
+                        android:background="@color/main_bg"
+                        android:divider="@null" >
+                    </com.deya.hospital.util.ScrollViewIncludeListView>
+
+                    <View
+                        android:id="@+id/chooseline"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="#2f7ddf"
+                        android:visibility="gone" />
+
+                    <View
+                        android:id="@+id/unchooseline"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/devider" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="2dp"
+                            android:paddingTop="2dp" >
+
+                            <TextView
+                                android:id="@+id/line1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="措施" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="规范" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="不规范" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/methodline"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/devider" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:divider="@null"
+                            android:orientation="horizontal" >
+
+                            <com.deya.hospital.util.ScrollViewIncludeListView
+                                android:id="@+id/listView2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:divider="@null"
+                                android:listSelector="@color/white" >
+                            </com.deya.hospital.util.ScrollViewIncludeListView>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/continueBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="5"
+                        android:background="@drawable/left_round_bg"
+                        android:gravity="center"
+                        android:text="继\u3000续"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/finishBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="2px"
+                        android:layout_weight="3"
+                        android:background="@drawable/right_round_yellow_biankuang"
+                        android:gravity="center"
+                        android:text="结束观察"
+                        android:textColor="@drawable/finish_btn_style"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f5f5f5"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white" >
+
+                        <TextView
+                            android:id="@+id/totalTv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="已上传" />
+
+                        <TextView
+                            android:id="@+id/qipaoTv"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/pop_add_img"
+                            android:gravity="center"
+                            android:text="+1"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+
+                        <View
+                            android:id="@+id/taskline"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/totalTv"
+                            android:background="@color/devider" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/totalfileTv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center"
+                            android:text="照片与录音" />
+
+                        <TextView
+                            android:id="@+id/totalfileTvpop"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/pop_add_img"
+                            android:gravity="center"
+                            android:text="+1"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+
+                        <View
+                            android:id="@+id/fileline"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/totalfileTv"
+                            android:background="@color/devider" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <com.deya.hospital.util.ScrollViewIncludeListView
+                    android:id="@+id/finishTimesList"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:listSelector="@color/listselect"
+                    android:minHeight="100dp" >
+                </com.deya.hospital.util.ScrollViewIncludeListView>
+
+                <com.deya.hospital.util.ScrollViewIncludeListView
+                    android:id="@+id/fileListView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:listSelector="@color/listselect"
+                    android:minHeight="100dp"
+                    android:visibility="gone" >
+                </com.deya.hospital.util.ScrollViewIncludeListView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/framlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/translucence"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/frameTop"
+            android:layout_width="fill_parent"
+            android:layout_height="177dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:id="@+id/framlistlay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.deya.hospital.util.ScrollViewIncludeListView
+                android:id="@+id/typelistViewFram"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:background="@color/main_bg"
+                android:divider="@null"
+                android:visibility="gone" >
+            </com.deya.hospital.util.ScrollViewIncludeListView>
+
+            <View
+                android:id="@+id/chooselineFram"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="#2f7ddf"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/framguid1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:src="@drawable/arrowleft" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/guid_text_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="点击选择指征"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/framguid2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:orientation="vertical"
+                android:paddingLeft="10dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="80dp"
+                    android:src="@drawable/arrowright" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/guid_text_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="选择规范/不规范"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/framlayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="3.3"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:visibility="invisible" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="规范" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="不规范" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#85b4fd" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <com.deya.hospital.util.ScrollViewIncludeListView
+                        android:id="@+id/listView2Fram"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@null" >
+                    </com.deya.hospital.util.ScrollViewIncludeListView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/framguid3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/guid_text_bg"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="点击确认按钮"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="80dp"
+                android:src="@drawable/arrowdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/framguid4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="right"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/guid_text_bg"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="点击结束按钮"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="80dp"
+                android:src="@drawable/arrowdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/framguid5"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="4" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_weight="3" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/guid_text_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="点击结束观察"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="80dp"
+                    android:src="@drawable/arrowdown" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/framsubmitlay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/continueBtnFramLay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@color/white"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/continueBtnFram"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/left_round_bg"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:text="继\u3000续"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/finishBtnFramlay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:padding="5dp"
+                android:visibility="invisible" >
+
+                <TextView
+                    android:id="@+id/finishBtnFram"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="2px"
+                    android:background="@drawable/right_round_yellow_biankuang"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="结束观察"
+                    android:textColor="@drawable/finish_btn_style"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

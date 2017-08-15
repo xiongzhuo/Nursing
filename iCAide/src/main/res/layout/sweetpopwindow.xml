@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/black_triangle" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_round_bg"
+        android:gravity="center"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/allTv"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:minWidth="220dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:text="全部"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+        <View
+            android:id="@+id/devider1"
+            android:layout_width="match_parent"
+            android:background="@color/devider"
+            android:visibility="gone"
+            android:layout_height="1dp"/>
+        <TextView
+            android:id="@+id/handView"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:minWidth="220dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="手卫生统计"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/formview"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:minWidth="220dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="医院感染管理临床质控统计"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

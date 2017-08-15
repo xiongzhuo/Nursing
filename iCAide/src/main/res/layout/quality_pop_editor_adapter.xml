@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listselect_btn"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingRight="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:ems="0"
+        android:gravity="center_vertical"
+        android:padding="6dip"
+        android:background="@color/white"
+        android:text="哈哈哈哈哈啊哈"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@color/devider" />
+
+    <LinearLayout
+        android:id="@+id/editorLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/singleCheckLay"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/titleLay"
+            android:background="@drawable/round_white_gray_selector"
+            android:padding="2dp">
+
+            <ImageView
+                android:id="@+id/title_check"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:button="@null"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scoreEdtLay"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/titleLay"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/plus__btn"
+                android:focusable="false" />
+
+            <TextView
+                android:id="@+id/numTv"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@drawable/num_text_bg"
+                android:focusable="false"
+                android:gravity="center"
+                android:maxEms="5"
+                android:minEms="1"
+                android:text="0"
+                android:textColor="@color/light_yellow" />
+
+            <Button
+                android:id="@+id/btn_subtraction"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/substr_btn"
+                android:focusable="false"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/itemRulesLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <com.deya.hospital.util.ScrollViewIncludeGridView
+            android:id="@+id/itemList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:focusable="false"
+            android:listSelector="@color/white"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="@dimen/dp_10"
+            android:scrollbars="@null"></com.deya.hospital.util.ScrollViewIncludeGridView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/itemRulesLayVertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.deya.hospital.util.ScrollViewIncludeListView
+            android:id="@+id/itemList2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:divider="@color/main_bg"
+            android:dividerHeight="1dp"
+            android:focusable="false"
+            android:footerDividersEnabled="true"
+            android:listSelector="@null"
+            android:scrollbars="@null"></com.deya.hospital.util.ScrollViewIncludeListView>
+    </LinearLayout>
+</LinearLayout>

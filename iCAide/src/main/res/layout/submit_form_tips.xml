@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <com.deya.hospital.util.CommonTopView
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="提示" />
+
+
+
+    <ImageView
+        android:id="@+id/ivStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/sup_tip_img" />
+
+    <TextView
+        android:id="@+id/tipTxt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16" />
+    <TextView
+        android:id="@+id/tips"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/title_gray"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:textSize="@dimen/sp_14" />
+    <TextView
+        android:id="@+id/caculateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/title_gray"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:lineSpacingExtra="3dp"
+        android:textSize="@dimen/sp_14" />
+
+
+    <LinearLayout
+        android:id="@+id/listLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/btn_round_blue_selector"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/typesName"
+            android:layout_width="match_parent"
+            android:text="继续督导"
+            android:textSize="18sp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_height="@dimen/dp_48" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/spaceLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/btn_round_blue_selector"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+
+            android:text="回到工作间"
+            android:textSize="18sp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_height="@dimen/dp_48" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     
+ 
+     
+     
+ 
+     
+ 
+     
+    
+     IM VIEW
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:IMSDK="http://schemas.android.com/apk/res-auto"
+    style="@style/NavPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="none"
+    android:background="#E4E3E3"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="130.0dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="130.0dip"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="10dip" >
+
+            <ImageView
+                android:id="@+id/desc"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="desc" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical"
+                android:paddingTop="20dp" >
+
+                <com.im.sdk.dy.ui.chatting.base.EmojiconTextView
+                    android:id="@+id/contact_nameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="16dp"
+                    android:singleLine="true"
+                    android:text="{name}"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/contact_numer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="center_vertical"
+                    android:text="number"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/contact_signure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="center_vertical"
+                    android:text="number"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.im.sdk.dy.common.view.SettingItem
+            android:id="@+id/settings_new_msg_sound"
+            style="@style/settings_item_layout_single"
+            IMSDK:item_accessoryType="switchbutton"
+            IMSDK:item_showDivider="true"
+            IMSDK:item_titleText="@string/settings_new_msg_notification_sound" />
+
+        <com.im.sdk.dy.common.view.SettingItem
+            android:id="@+id/settings_new_msg_shake"
+            style="@style/settings_item_layout_single"
+            IMSDK:item_accessoryType="switchbutton"
+            IMSDK:item_showDivider="false"
+            IMSDK:item_titleText="@string/settings_new_msg_notification_shake" />
+
+        
+        <com.im.sdk.dy.common.view.SettingItem
+            android:id="@+id/settings_serverIP"
+            style="@style/settings_item_layout_single"
+            IMSDK:item_accessoryType="arrow"
+            android:layout_marginTop="@dimen/LargerPadding"
+            IMSDK:item_showDivider="true"
+            android:visibility="gone"
+            IMSDK:item_titleText="@string/settings_server_address" />
+
+        <com.im.sdk.dy.common.view.SettingItem
+            android:id="@+id/settings_appkey"
+            style="@style/settings_item_layout_single"
+            IMSDK:item_accessoryType="arrow"
+            IMSDK:item_showDivider="true"
+            android:visibility="gone"
+            IMSDK:item_titleText="@string/settings_appkey" />
+
+        <com.im.sdk.dy.common.view.SettingItem
+            android:id="@+id/settings_token"
+            style="@style/settings_item_layout_single"
+            IMSDK:item_accessoryType="arrow"
+            IMSDK:item_showDivider="false"
+            android:visibility="gone"
+            IMSDK:item_titleText="@string/settings_apptoken" />
+
+        <com.im.sdk.dy.common.view.SettingItem
+            android:id="@+id/settings_update"
+            style="@style/settings_item_layout_single"
+            IMSDK:item_accessoryType="arrow"
+            IMSDK:item_showDivider="false"
+            android:layout_marginTop="@dimen/LargerPadding"
+            IMSDK:item_titleText="@string/demo_current_version" />
+
+        <com.im.sdk.dy.common.view.SettingItem
+            android:id="@+id/setting_exit"
+            style="@style/settings_item_layout_single"
+            android:layout_marginTop="@dimen/SmallListHeight"
+            IMSDK:item_showDivider="true"
+            IMSDK:item_titleText="@string/settings_exit_title" />
+
+        <com.im.sdk.dy.common.view.SettingItem
+            android:id="@+id/setting_switch"
+            style="@style/settings_item_layout_single"
+            IMSDK:item_showDivider="false"
+            IMSDK:item_titleText="@string/settings_switch_title" />
+    </LinearLayout>
+
+</ScrollView>

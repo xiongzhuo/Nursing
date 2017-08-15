@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_60"
+    android:gravity="center"
+    android:orientation="vertical"
+     >
+
+    <LinearLayout
+        android:id="@+id/datelayout"
+        android:layout_width="@dimen/dp_35"
+        android:layout_height="@dimen/dp_35"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_btn_calendar"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <com.example.calendar.widget.DayView
+            android:id="@+id/tvDayView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="111"
+            android:textColor="@color/text_calendar"
+            android:textSize="@dimen/sp_12" />
+
+        <com.example.calendar.widget.DayView
+            android:id="@+id/tvChinaDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDayView"
+            android:gravity="center"
+            android:text="111"
+            android:textColor="@color/text_calendar"
+            android:textSize="@dimen/sp_8" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/num"
+        android:visibility="gone"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/task_num_img"
+        android:gravity="center"
+        android:text="88"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/sp_8" />
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/commomtop" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/text_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/addperson_btn"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="3dp"
+            android:minHeight="50dp"
+            android:padding="5dp"
+            android:layout_margin="20dp"
+            android:text="多重耐药菌感染防护、高危部门，高危环节督查、职业暴露防护、三管感染预防与控制措施依从管理等更多专属功能，请赶快联系客服！"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="left">
+          
+                   <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+             <TextView 
+                android:text="客服电话："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"/>
+              <TextView 
+                  android:id="@+id/tellTv"
+                android:text="@string/credit_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/top_color"/>
+              </LinearLayout>
+                <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+             <TextView 
+                android:text="官网网址："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"/>
+              <TextView 
+                 android:id="@+id/webTv"
+                android:text="http://www.gkgzj.com"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/top_color"/>
+              </LinearLayout>
+        </LinearLayout>        
+                <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/who_bg" />
+        
+    </LinearLayout>
+</LinearLayout>

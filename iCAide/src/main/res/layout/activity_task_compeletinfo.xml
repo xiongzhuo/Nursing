@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+<include
+    android:id="@+id/top" 
+    layout="@layout/commomtop"/>
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:layout_below="@+id/top"
+        android:layout_above="@+id/sumbmitlay"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            <LinearLayout
+                android:id="@+id/departLay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+             <LinearLayout android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="horizontal">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="科室"
+                    android:textSize="14sp" />
+                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/light_yellow"
+                    android:text="（必填）"
+                    android:textSize="14sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:orientation="horizontal">
+<EditText
+                    android:id="@+id/adressEdt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:hint="点击填写手术间"
+                    android:background="@drawable/big_round_blue_type_style"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/departTv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/job_down"
+                    android:drawablePadding="10dp"
+                    android:hint="点击选择科室"
+                    android:background="@drawable/big_round_blue_type_style"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:textSize="14sp" />
+                   
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nameLay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="被观察者："
+                    android:textSize="14sp" />
+                <LinearLayout android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                       android:paddingBottom="10dp"
+                    android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/nameEditor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/big_round_blue_type_style"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:hint="点击输入姓名"
+                    android:textSize="14sp" />
+                   <EditText
+                    android:id="@+id/comporator"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/big_round_blue_type_style"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                     android:hint="点击输入所属团队"
+                    android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/devider" />
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="工作性质:"
+                android:textSize="14sp" />
+
+                <com.deya.hospital.util.ScrollViewIncludeGridView
+                android:id="@+id/gv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:divider="@color/devider"
+                android:horizontalSpacing="10dp"
+                android:listSelector="@color/white"
+                android:numColumns="4"
+                android:paddingBottom="10dp"
+                android:scrollbars="@null" >
+            </com.deya.hospital.util.ScrollViewIncludeGridView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/devider" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/font_blak"
+                android:text="工作类型:"
+                android:textSize="14sp" />
+
+            <com.deya.hospital.util.ScrollViewIncludeGridView
+                android:id="@+id/dialog_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_weight="1"
+                android:divider="@color/devider"
+                android:listSelector="@color/white"
+                android:numColumns="3"
+                android:scrollbars="@null"
+                android:paddingBottom="12dp"
+                android:verticalSpacing="10dp" >
+            </com.deya.hospital.util.ScrollViewIncludeGridView>
+            </LinearLayout>
+            
+            
+            
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="观察时间"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/timeTv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/job_down"
+                    android:background="@drawable/big_round_blue_type_style"
+                    android:gravity="center"
+                    android:padding="10dp"
+                     android:hint="点击选择观察时间"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+        
+    </ScrollView>
+
+
+    
+ <LinearLayout
+        android:id="@+id/sumbmitlay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="bottom"
+        android:paddingBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+    >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/devider" />
+
+        <Button
+            android:id="@+id/sumbmitBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_round_blue"
+            android:text="保\u3000存"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+</RelativeLayout>

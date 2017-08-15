@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
+    useLibrary "org.apache.http.legacy"
+
+        dexOptions {
+
+            javaMaxHeapSize "4g"
+
+        }
+
+    defaultConfig {
+        applicationId "com.deya.acaide"
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME
+        multiDexEnabled true
+//        ndk {
+//            abiFilters  "armeabi-v7a"  // 指定要ndk需要兼容的架构(这样其他依赖包里mips,x86,armeabi,arm-v8之类的so会被过滤掉)
+//        }
+
+
+        ndk{
+            moduleName "libmupdf"  //设置库(so)文件名称
+            ldLibs "log"
+            abiFilters  "armeabi"
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+
+    signingConfigs {
+        releaseConfig {
+            keyAlias System.getenv("KEYALIAS")
+            keyPassword System.getenv("KEYPWD")
+            storeFile file('D:/kestore')
+            storePassword System.getenv("KSTOREPWD")
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.releaseConfig
+            // 是否进行混淆
+            minifyEnabled false
+            shrinkResources false
+            // 混淆文件的位置
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            debuggable true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+
+    sourceSets {
+        main {
+            jni.srcDirs = ['src/main/jniLibs']
+        }
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+    }
+    productFlavors {
+        necess {
+            ndk {
+                abiFilters "armeabi"
+                abiFilters "arm64-v8a"
+                //     abiFilters "x86_64"
+//                abiFilters "x86"
+//                abiFilters "armeabi"
+            }
+        }
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':pullToRefreshLibrary')
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.google.code.gson:gson:2.2.2'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    compile 'es.voghdev.pdfviewpager:library:1.0.2'
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    compile 'com.android.support:recyclerview-v7:25.2.0'
+}
+

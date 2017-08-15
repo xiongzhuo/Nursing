@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/top_color" >
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back_white" />
+
+            <TextView
+                android:id="@+id/backText"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_48"
+                android:layout_toRightOf="@+id/img_back"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:text="返回"
+                android:layout_marginLeft="3dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:typeface="monospace" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_centerInParent="true"
+            android:paddingLeft="70dp"
+            android:paddingRight="60dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            android:typeface="monospace" />
+
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_48"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:contentDescription="@string/app_name"
+            android:singleLine="true"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:typeface="monospace"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</LinearLayout>

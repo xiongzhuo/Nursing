@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lv_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:cacheColorHint="@null"
+        android:divider="@null"
+        android:indicatorLeft="@null"
+        android:listSelector="@drawable/listselect_btn"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00ffffff"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/ll_search_sharp"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/btn_shape_gray_half"
+            android:layout_margin="10dp"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_circle_search" />
+
+            <TextView
+                android:id="@+id/et_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@null"
+                android:drawablePadding="5dp"
+                android:text="请输入关键字搜索"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <View
+            android:id="@+id/lineno"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@color/main_bg" />
+    </LinearLayout>
+
+</FrameLayout>
+
+
+</LinearLayout>

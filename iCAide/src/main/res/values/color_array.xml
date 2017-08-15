@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <array name="shop_item_colors">
+	<item>#F07958</item>
+	<item>#F85E68</item>
+	<item>#5F96FF</item>
+	<item>#50E39A</item>
+	<item>#44A6F4</item>
+	<item>#FD9C4C</item>
+</array>
+<array name="prize_status_colors">
+	<item>#F1832D</item>
+	<item>#45DEA5</item>
+	<item>#2880EA</item>
+</array>
+<array name="im_contacts_colors">
+	<item>#FD9C4C</item>
+	<item>#5F96FF</item>
+	<item>#50E39A</item>
+	<item>#F07958</item>
+	<item>#44A6F4</item>
+</array>
+</resources>

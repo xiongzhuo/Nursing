@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider" >
+    </View>
+
+    <include layout="@layout/commomtop" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/ directoryTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="组织" />
+
+            <TextView
+                android:id="@+id/scoreTv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5分"
+                android:textColor="@color/title_gray" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1.1dp"
+            android:layout_height="match_parent"
+            android:background="@color/devider"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="考评方法" />
+
+            <TextView
+                android:id="@+id/literatureTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="参考送货打死老虎大家快乐"
+                android:textColor="@color/title_gray"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider" >
+    </View>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+      <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+              >
+            <TextView
+                android:id="@+id/seeDetailTv"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="点击查看评分标准及详情"
+                android:drawableRight="@drawable/img_open"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/closeLay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.2dp"
+                    android:background="@color/top_color" />
+
+                <TextView
+                    android:id="@+id/DetailTv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/title_gray"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.2dp"
+                    android:background="@color/top_color" />
+
+                <TextView
+                    android:id="@+id/closeTv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="点击收起"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/top_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/resultLay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="评分说明" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/devider" >
+                </View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:padding="12dp"
+                    android:gravity="center"
+                    android:text="评定结果" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/devider" >
+            </View>
+
+            <com.baoyz.swipemenulistview.SwipeMenuListView
+                android:id="@+id/listView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:divider="@color/devider"
+                android:dividerHeight="1dp"
+                android:listSelector="@drawable/listselect_btn"
+                android:scrollbars="@null" >
+            </com.baoyz.swipemenulistview.SwipeMenuListView>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/bottom"
+            android:layout_alignParentBottom="true"
+            android:background="@color/devider" >
+        </View>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lastPage"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:paddingLeft="12dp"
+                android:text="上一页" />
+
+            <TextView
+                android:id="@+id/pageTv"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:text=""
+                android:textColor="@color/light_yellow"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/toatalPageTv"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/nextPage"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingRight="12dp"
+                android:text="下一页" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

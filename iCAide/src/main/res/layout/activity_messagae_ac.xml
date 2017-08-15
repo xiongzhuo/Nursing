@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/listitem_gray"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+        <com.deya.hospital.util.CommonTopView
+        xmlns:commonTopView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:text="新手帮助"
+        commonTopView:showRight="false"
+        android:layout_height="wrap_content">
+    </com.deya.hospital.util.CommonTopView>
+    <include layout="@layout/common_network_unconnect"/>
+
+    <TextView
+        android:id="@+id/timeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#999999"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:text="05/25  17:58"
+        android:textColor="#666666"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="12dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/imgRl"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp" >
+
+            <ImageView
+                android:id="@+id/firtImg"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/firstcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:background="#999999"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="第一堂课"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:listSelector="@null"
+            android:scrollbars="@null" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

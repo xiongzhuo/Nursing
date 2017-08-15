@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_e8ebf0"
+    android:orientation="vertical" >
+
+            
+    <com.deya.hospital.util.CommonTopView
+        xmlns:commonTopView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:text="协议"
+        commonTopView:showRight="false"
+        commonTopView:righttext=""
+        android:layout_height="wrap_content">
+    </com.deya.hospital.util.CommonTopView>
+    
+            <include layout="@layout/common_network_unconnect"/>
+           
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:scrollbars="none" >
+
+            <LinearLayout
+            android:id="@+id/topbg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="10dp"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/agreement"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/greytext"
+                android:textSize="14sp"
+               />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

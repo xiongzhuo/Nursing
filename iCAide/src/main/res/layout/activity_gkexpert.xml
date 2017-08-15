@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+    
+      <com.deya.hospital.util.CommonTopView
+        xmlns:commonTopView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:text="感控专家"
+        commonTopView:showRight="false"
+        android:layout_height="wrap_content">
+    </com.deya.hospital.util.CommonTopView>
+        
+    <ListView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:id="@+id/lv_expert"></ListView>
+    <Button 
+        android:id="@+id/addGKteam"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="创建团队"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:textColor="@color/blue"
+        android:background="@drawable/big_round_blueline_gray_style"/>
+
+</LinearLayout>

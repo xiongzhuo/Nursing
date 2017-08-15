@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_20"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="1、哈哈哈哈"
+        android:minHeight="@dimen/dp_48"
+        android:maxLines="4"
+        android:textColor="@color/top_color"
+        android:textSize="@dimen/sp_16" />
+            <TextView
+                android:id="@+id/moreTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="查看更多"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_alignParentRight="true"
+                android:maxLines="4"
+                android:layout_below="@+id/titleTv"
+                android:minWidth="@dimen/dp_55"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/light_yellow"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/top_color" />
+
+    <TextView
+        android:id="@+id/pingjia"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@color/white"
+        android:drawableRight="@drawable/point_down"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:text="督查评价方法"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/pjaMethodTxt"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:padding="@dimen/dp_10"
+        android:maxLines="4"
+        android:textColor="@color/list_title"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_14" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@color/main_bg"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:text="督查评价细则"
+
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider" />
+
+    <include layout="@layout/quality_pop_editor_adapter" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_20"
+        android:paddingLeft="@dimen/dp_48"
+        android:paddingRight="@dimen/dp_48"
+        android:paddingTop="@dimen/dp_20">
+
+        <Button
+            android:id="@+id/cancleBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_weight="1"
+            android:background="@drawable/addperson_btn"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_weight="1"
+            android:background="@drawable/btn_round_sumbmit_bg"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

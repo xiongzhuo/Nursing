@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg"
+    android:gravity="center_vertical"
+    android:padding="5dp"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/big_light_blue_corner_biankuang"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10" >
+
+            <TextView
+                android:id="@+id/tv_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="洗手液:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/big_gray_biankuang"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="1dp" >
+
+                <TextView
+                    android:id="@+id/standardEdt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_2"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:gravity="center_vertical"
+                    android:hint="请选择规格"
+                    android:paddingLeft="@dimen/dp_3"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+                
+
+                <ImageView
+                    android:id="@+id/selectTv"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:padding="@dimen/dp_15"
+                    android:src="@drawable/dropdown"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/unitsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:padding="@dimen/dp_3"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <Button
+                android:id="@+id/deletBtn"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:background="@drawable/sharp_but_consumptiondelet" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#6bbbf6" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10" >
+
+            <TextView
+                android:id="@+id/monthPicupTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="本月领取(单位：瓶)"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/pickupNum"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_2"
+                android:layout_weight="1"
+                android:background="@drawable/big_gray_biankuang"
+                android:hint="点击填写   例:10"
+                android:inputType="number"
+                android:maxLength="3"
+                android:paddingLeft="@dimen/dp_3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="#f2f2f2" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10" >
+
+            <TextView
+                android:id="@+id/monthStoreTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="本月库存(单位：ml)"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/monthStoreNum"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_2"
+                android:layout_weight="1"
+                android:background="@drawable/big_gray_biankuang"
+                android:hint="点击填写"
+                android:inputType="number"
+                android:maxLength="4"
+                android:padding="@dimen/dp_3"
+                android:paddingLeft="@dimen/dp_3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

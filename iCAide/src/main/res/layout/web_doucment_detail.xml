@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+       <com.deya.hospital.util.CommonTopView
+        xmlns:commonTopView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:text="导读"
+        commonTopView:showRight="false"
+        android:layout_height="wrap_content">
+    </com.deya.hospital.util.CommonTopView>
+
+    <FrameLayout
+        android:id="@+id/fl_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </WebView>
+        <Button
+            android:id="@+id/knowledge_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/add_question_selector"
+            android:text="知识\n评估"
+            android:visibility="gone"
+            android:layout_gravity="bottom|right"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+        </FrameLayout>
+
+</LinearLayout>

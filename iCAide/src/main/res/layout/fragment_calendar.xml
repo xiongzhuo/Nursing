@@ -1,0 +1,259 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent">
+
+    <com.example.calendar.widget.CalendarLinearLayoutWithListView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/rl_back"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/btn_back_style" />
+
+                <TextView
+                    android:id="@+id/backText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/img_back"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="center"
+                    android:text="返回"
+                    android:textColor="@color/top_color"
+                    android:textSize="18sp"
+                    android:typeface="monospace" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/backToToday"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_date"
+                android:src="@drawable/back_to_today" />
+
+            <TextView
+                android:id="@+id/staticsImg"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="统计"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/devider"></View>
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2px"
+            android:background="@color/devider"></View>
+
+        <LinearLayout
+            android:id="@+id/days"
+            android:layout_width="match_parent"
+            android:layout_height="33.3dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/daysTextview"
+                android:text="一"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                style="@style/daysTextview"
+                android:text="二"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                style="@style/daysTextview"
+                android:text="三"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                style="@style/daysTextview"
+                android:text="四"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                style="@style/daysTextview"
+                android:text="五"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                style="@style/daysTextview"
+                android:text="六"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                style="@style/daysTextview"
+                android:text="日"
+                tools:ignore="SmallSp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2px"
+            android:background="@color/devider"></View>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:background="@color/white"></View>
+
+        <com.example.calendar.widget.ViewPagerHeightWrapContent
+            android:id="@+id/content_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+
+        <LinearLayout
+            android:id="@+id/lay_bottom_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/calender_down2" />
+
+            <LinearLayout
+                android:id="@+id/switchView"
+                android:layout_width="fill_parent"
+                android:layout_height="41dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2px"
+                    android:background="@color/devider" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/bar_height"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/tip_img"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/tip_unfinish" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/tip_img"
+                        android:text="未完成督导"
+                        android:textColor="@color/list_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/switchBtn"
+                        android:text="只显示未完成督导数"
+                        android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/switchBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/dynamic_but2" />
+            </RelativeLayout>
+        </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/devider" />
+
+
+                <ListView
+                    android:id="@+id/planlist"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:cacheColorHint="@null"
+                    android:dividerHeight="0dp"
+                    android:indicatorLeft="@null"
+                    android:listSelector="@drawable/listselect_btn"
+                    android:scrollbars="@null"></ListView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.example.calendar.widget.CalendarLinearLayoutWithListView>
+
+    <Button
+        android:id="@+id/addTaskBtn"
+        android:layout_width="@dimen/dp_55"
+        android:layout_height="@dimen/dp_55"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/dp_30"
+        android:background="@drawable/preset_supervisor_selector"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+</FrameLayout>

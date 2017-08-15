@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="prize_status_string">
+        <item>审核中</item>
+        <item>已处理</item>
+        <item>已发货</item>
+    </string-array>
+    <string-array name="im_contacts_drawable">
+        <item>@drawable/round_orange</item>
+        <item>@drawable/round_blue_light</item>
+        <item>@drawable/round_green</item>
+        <item>@drawable/round_orang_deep</item>
+        <item>@drawable/round_blue</item>
+    </string-array>
+    <string-array name="facilities_investigation_string">
+        <item>患者区域洗手设施不足</item>
+        <item>工作区域洗手设施不够</item>
+        <item>洗手设施太远</item>
+        <item>洗手池脏</item>
+        <item>洗手液容器未一次性使用</item>
+        <item>无洗手液或手消毒液</item>
+        <item>无干手纸巾、干手机</item>
+    </string-array>
+    <string-array name="train_times_string">
+        <item>@string/untime_time_week_two</item>
+        <item>@string/untime_time_month_one</item>
+        <item>@string/untime_time_month_three</item>
+        <item>@string/untime_time_year_half</item>
+        <item>@string/untime_time_year_one</item>
+    </string-array>
+
+    
+        <string-array name="question_type">
+            <item>手卫生</item>
+            <item>医院感染临床质控</item>
+            <item>通用督导本</item>
+            <item>手卫生消毒消耗量</item>
+        </string-array>
+    
+
+</resources>

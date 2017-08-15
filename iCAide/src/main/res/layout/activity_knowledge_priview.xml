@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.deya.hospital.util.CommonTopView
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="多耐病例" />
+
+    <include layout="@layout/layout_adpter_knoledgecollection"/>
+<View
+    android:layout_width="match_parent"
+    android:background="@color/devider"
+    android:layout_height="1dp"/>
+ <ListView
+     android:id="@+id/pagerList"
+     android:layout_width="match_parent"
+     android:layout_weight="1"
+     android:layout_height="match_parent"></ListView>
+
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18"
+        android:background="@drawable/btn_round_sumbmit_bg"
+        android:layout_margin="20dp"/>
+
+    <!--试卷底部-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider"
+        />
+    <LinearLayout
+        android:id="@+id/bottm_lay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_gravity="center_vertical"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/collectImg"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:src="@drawable/shouchang_normal"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/devider"
+            android:layout_margin="3dp"
+            />
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:layout_height="@dimen/dp_35"
+            android:text="提交"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_round_sumbmit_bg"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

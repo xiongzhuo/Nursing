@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+     >
+    <com.deya.hospital.util.CommonTopView
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+    
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:background="#ffffff"
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@null"
+        android:indicatorLeft="@null"
+        android:divider="@null"
+        android:listSelector="@drawable/listselect_btn"
+        android:scrollbars="@null" >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    <com.deya.hospital.util.LoadingView
+        android:id="@+id/loadingView"
+        android:layout_width="fill_parent"
+        android:visibility="gone"
+        android:layout_height="fill_parent" >
+    </com.deya.hospital.util.LoadingView>
+
+<include layout="@layout/common_network_unconnect"/>
+</LinearLayout>

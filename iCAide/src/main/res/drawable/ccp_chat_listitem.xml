@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+   
+ 
+   
+   
+ 
+    				
+ 
+   
+  
+   IM VIEW
+ -->
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:state_pressed="true" android:drawable="@drawable/ccp_trans" />
+    <item android:state_focused="false" android:state_pressed="true" android:drawable="@drawable/ccp_trans" />
+    <item android:state_focused="true" android:drawable="@drawable/ccp_trans" />
+    <item android:state_focused="false" android:drawable="@drawable/ccp_trans" />
+</selector>

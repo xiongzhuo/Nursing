@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/networkView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/no_network" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="亲，您的网络不顺畅哦，\n请检查您的网络，再继续访问！"
+            android:textColor="#909090"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:background="#ffffff"
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@null"
+        android:indicatorLeft="@null"
+        android:divider="@color/devider"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/listselect_btn"
+        android:scrollbars="@null" >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+     <LinearLayout
+        android:id="@+id/empertyLay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="-20dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/no_network" />
+
+        <TextView
+            android:id="@+id/enpertytext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="亲,此类型暂时没有记录哦~\n快去提问回答吧!"
+            android:textColor="#909090"
+            android:textSize="16sp" />
+    </LinearLayout>
+ <TextView
+        android:id="@+id/empertyView"
+         android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="抱歉，暂未找到合适的信息！"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:textColor="#909090"/>
+</LinearLayout>

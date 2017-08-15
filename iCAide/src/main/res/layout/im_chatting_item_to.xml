@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_12"
+    android:gravity="center_vertical|right"
+    android:layout_below="@+id/chatting_time_tv"
+ >
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:gravity="right"
+    android:layout_gravity="right"
+    android:orientation="vertical">
+<LinearLayout
+    android:id="@+id/layout1"
+    style="@style/ChattingUIContent"
+   >
+    <View
+        android:layout_width="0.0dip"
+        android:layout_height="1dp"
+        android:layout_weight="1.0" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/chatting_user_tv"
+            style="@style/ChattingUISenderText"
+            android:layout_gravity="right"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/chatting_state_iv"
+                style="@style/ChattingUIState"
+                android:layout_gravity="center_vertical" />
+
+            <ProgressBar
+                android:id="@+id/uploading_pb"
+                style="@style/smallCustomProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"/>
+
+            <com.im.sdk.dy.ui.chatting.base.EmojiconTextView
+                android:id="@+id/chatting_content_itv"
+                style="@style/ChattingUIText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chatto_bg"
+                 android:textColor="#ffffff"
+                android:autoLink="all"
+                emojicon:emojiconSize="@dimen/Emoji_icon_size"
+                android:linksClickable="false"
+                android:maxWidth="215.0dip"
+                android:minHeight="@dimen/ChattingContentMinHeight" />
+
+        </LinearLayout>
+ </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/shareLay_chatting"
+        android:layout_width="fill_parent"
+        android:background="@drawable/round_white_gray_selector"
+        android:gravity="left"
+        android:visibility="gone"
+        android:layout_margin="@dimen/dp_15"
+        android:minWidth="@dimen/dp_200"
+        android:padding="@dimen/dp_12"
+        android:layout_marginLeft="@dimen/dp_100"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/shareImg"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:background="@drawable/share_logo"/>
+        <TextView
+            android:layout_width="@dimen/dp_60"
+            android:textColor="@color/list_content"
+            android:textSize="@dimen/sp_12"
+            android:text="护理工作间"
+            android:layout_below="@+id/shareImg"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/shareTitle"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/sp_16"
+            android:layout_toRightOf="@+id/shareImg"
+            android:height="@dimen/dp_40"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textColor="@color/list_title"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/shareContent"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/sp_14"
+            android:layout_toRightOf="@+id/shareImg"
+            android:layout_below="@+id/shareTitle"
+            android:textColor="@color/list_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>
+  <include
+      layout="@layout/im_chatting_item_avatar_to" />
+
+</LinearLayout>

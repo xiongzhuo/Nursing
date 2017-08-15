@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="20dp"
+    android:background="@drawable/dialog_sharp"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="不规范原因"
+        android:textColor="@color/top_color"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/top_color" />
+
+    <ListView
+        android:id="@+id/dialog_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:layout_weight="1"
+        android:divider="#000000"
+        android:listSelector="@drawable/listselect_btn"
+        android:scrollbars="@null" >
+    </ListView>
+
+    <Button
+        android:id="@+id/chooseBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_margin="1dp"
+        android:background="@drawable/btn_sharp_bottom_radius_blue"
+        android:text="确   定"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

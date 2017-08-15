@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mobile_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:paddingTop="12dp"
+    android:orientation="vertical" >
+	<View 
+	      android:layout_width="match_parent"
+	      android:layout_height="1dp"
+	      android:background="@color/line"
+	    />
+	<LinearLayout android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	      android:background="@color/white"
+	      android:gravity="center_vertical"
+	    android:orientation="horizontal">
+    <EditText 
+        android:id="@+id/edt_mobile"
+      
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="20dp"
+    	android:textSize="16sp"
+    	  android:singleLine="true"
+    	  android:layout_weight="1"
+    	  android:phoneNumber="true"
+    	  android:background="@null"
+    	android:hint="输入要添加的手机号码(必填)"
+        />
+    <ImageView
+        android:id="@+id/cacleImg" 
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/search_delet"/>
+    </LinearLayout>
+<View 
+	      android:layout_width="match_parent"
+	      android:layout_height="1dp"
+	      android:background="@color/devider"
+	    />
+ <EditText 
+     	android:visibility="gone"
+        android:id="@+id/edt_name"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="20dp"
+    	  android:singleLine="true"
+    	android:hint="输入要添加的姓名"
+    	android:textSize="16sp"
+        />
+<View 
+    	android:visibility="gone"
+	      android:layout_width="match_parent"
+	      android:layout_height="1dp"
+	      android:background="@color/line"
+	    />
+<Button 
+      android:id="@+id/btn_enter"
+        android:background="@drawable/btn_round_blue_selector"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="10dp"
+    	android:layout_margin="20dp"
+    	android:textColor="@color/white"
+    	android:textSize="18sp"
+    	android:visibility="gone"
+    	android:text="添  加"
+    />
+ <TextView 
+     	android:visibility="gone"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="5dp"
+    	android:gravity="center"
+    	android:layout_marginLeft="20dp"
+    	android:layout_marginRight="20dp"
+    	android:hint="添加完全免费"
+    	android:textSize="14sp"
+        />
+ 
+  <TextView 
+      	android:visibility="gone"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="5dp"
+    	android:layout_marginLeft="20dp"
+    	android:layout_marginRight="20dp"
+    	android:gravity="center"
+    	android:hint="由护理工作间后台短信给输入的手机号码发送短信邀请"
+    	android:textSize="14sp"
+        />
+</LinearLayout>

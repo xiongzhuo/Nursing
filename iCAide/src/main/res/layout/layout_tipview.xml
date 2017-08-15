@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#F9Fdcb"
+    android:id="@+id/ll_softarticle"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/tips_img"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+       />
+
+    <com.deya.hospital.util.SoftarticleViewFlipper
+        android:id="@+id/article_viewFlipper"
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_weight="1"
+        android:autoStart="true"
+        android:focusable="false"
+        android:inAnimation="@anim/push_down_in"
+        android:outAnimation="@anim/push_up_out" >
+    </com.deya.hospital.util.SoftarticleViewFlipper>
+
+    <ImageView
+        android:id="@+id/img_closearticle"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/img_clect" />
+
+</LinearLayout>

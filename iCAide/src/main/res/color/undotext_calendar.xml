@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lib="http://schemas.android.com/apk/res-auto">
+
+    <item lib:state_current="true"
+          android:state_selected="true"
+          android:color="@color/blue_" />
+    <item lib:state_current="true"
+          android:state_selected="false"
+          android:color="@color/undotext" />
+
+    <item lib:state_current="true"
+          android:state_pressed="true"
+          android:color="@color/undotext" />
+
+    <item lib:state_current="true"
+          android:color="@color/undotext" />
+
+</selector>

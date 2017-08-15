@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/control1"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/tv_top_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/btn_back_style" />
+
+        <TextView
+            android:id="@+id/backText"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_toRightOf="@+id/tv_top_location"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:text="返回"
+            android:layout_marginLeft="3dp"
+            android:textColor="@color/top_color"
+            android:textSize="16sp"
+            android:typeface="monospace" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:text="撰写回答"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:typeface="monospace" />
+
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/top_color"
+            android:textSize="16sp"
+            android:typeface="monospace" />
+    </RelativeLayout>
+
+    <View android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/answer_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_margin="20dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top|left"
+                    android:hint="请输入您的答案"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical" >
+
+            <com.deya.hospital.util.ScrollViewIncludeGridView
+                android:id="@+id/photoGv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:numColumns="3" >
+            </com.deya.hospital.util.ScrollViewIncludeGridView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#E4E4E4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/photo"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/photo_selector" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:text="匿名回答"
+                    android:textColor="#818181" />
+
+                <ImageView
+                    android:id="@+id/switchBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/dynamic_but1" />
+            </LinearLayout>
+            
+            <!-- <Button android:layout_width="match_parent"
+                android:id="@+id/bottom_btn"
+                android:layout_height="150dp"
+                android:background="@android:color/transparent"/> -->
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="20.0dip"
+    android:layout_marginRight="20.0dip"
+    android:background="@drawable/sharp"
+    android:orientation="vertical" >
+
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_marginLeft="1.0dip"
+        android:layout_marginRight="1.0dip"
+        android:clickable="true"
+        android:drawableBottom="@color/green"
+        android:drawablePadding="5.0dip"
+        android:gravity="center"
+        android:onClick="onPhotographClick"
+        android:text="提交成功"
+        android:textColor="@color/light_yellow"
+        android:textSize="16.0sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/list_line" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1.0dip"
+        android:layout_marginRight="1.0dip"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:onClick="onLocalClick"
+        android:text="工作人员会及时和您联系！\n如有疑问请拨打客服电话：400-969-7756"
+        android:textColor="@color/black"
+        android:textSize="14.0sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/list_line" />
+
+    <TextView
+        android:id="@+id/btn"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_marginLeft="1.0dip"
+        android:layout_marginRight="1.0dip"
+        android:clickable="true"
+        android:drawablePadding="5.0dip"
+        android:gravity="center"
+        android:onClick="onCancleClick"
+        android:text="知道啦"
+        android:layout_margin="20dp"
+        android:background="@drawable/round_btn_blue_type_style"
+        android:textColor="@color/white"
+        android:textSize="16.0sp" />
+
+</LinearLayout>

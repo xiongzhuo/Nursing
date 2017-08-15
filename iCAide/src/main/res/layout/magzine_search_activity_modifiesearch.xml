@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/btn_back_style" />
+
+            <TextView
+                android:id="@+id/backText"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/img_back"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="@color/top_color"
+                android:textSize="16sp"
+                android:typeface="monospace" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_rarent"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/rl_back"
+            android:orientation="horizontal" >
+
+            <RadioGroup
+                android:id="@+id/group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_down"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_button_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="推荐"
+                    android:textColor="@drawable/circle_tab_color_style"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_hit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_button_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="最新"
+                    android:textColor="@drawable/circle_tab_color_style"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/class_group"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_button_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="分类"
+                    android:textColor="@drawable/circle_tab_color_style"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_luyong"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_button_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="我"
+                    android:textColor="@drawable/circle_tab_color_style"
+                    android:textSize="18sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sendQuestion"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:button="@null"
+                android:gravity="center"
+                android:text="提问"
+                android:textColor="@color/top_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/searchTv"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_toLeftOf="@+id/searchTv"
+            android:layout_toRightOf="@+id/img_back"
+            android:layout_weight="1"
+            android:alpha="10"
+            android:background="@drawable/round_white_style"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/searchicon"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="9dp"
+                android:src="@drawable/search_icon" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@+id/searchicon"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint=""
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/top2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:alpha="10"
+                android:background="@drawable/round_white_style"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/search_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="搜索/分类"
+                    android:textColor="@color/title_gray" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/cancle_seach"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="取消"
+            android:textColor="#3E8FF2"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/networkView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/no_network" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="亲，您的网络不顺畅哦，\n请检查您的网络，再继续访问！"
+            android:textColor="#909090"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/order_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/searchLay"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <com.deya.hospital.util.HorizontalListView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/searchGv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:background="@color/white"
+                    android:fadingEdgeLength="5dp"
+                    android:requiresFadingEdge="horizontal"
+                    android:layout_marginBottom="10dp"
+                    app:dividerWidth="5dp" >
+                </com.deya.hospital.util.HorizontalListView>
+
+                <LinearLayout
+                    android:id="@+id/searchView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:paddingLeft="20dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:gravity="center_vertical"
+                        android:text="热门搜索"
+                        android:textColor="#d8d8d8"
+                        android:textSize="18sp" />
+
+                    <com.deya.hospital.widget.view.ButtonTextViewGroup
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/hotRadio"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/white"
+                        app:viewgroup_itemmargin="5dp"
+                        app:viewgroup_itempadding="10dp"
+                        app:viewgroup_linemargin="5dp"
+                        app:viewgroup_overspread="true"
+                        app:viewgroup_select="radio"
+                        app:viewgroup_textBackground="@drawable/round_search_gray_btn"
+                        app:viewgroup_textBackground_s="@drawable/round_grey_btn"
+                        app:viewgroup_textColor="@color/gray"
+                        app:viewgroup_textColor_s="@color/white"
+                        app:viewgroup_textSize="14sp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.5px"
+                        android:background="#ededed" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:gravity="center_vertical"
+                        android:text="历史搜索"
+                        android:textColor="#d8d8d8"
+                        android:textSize="18sp" />
+
+                    <ListView
+                        android:id="@+id/listView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@null"
+                        android:listSelector="@color/white" >
+                    </ListView>
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/searlist"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:scrollbars="@null" >
+                </ListView>
+
+                <LinearLayout
+                    android:id="@+id/empertyView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/no_network" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="20dp"
+                        android:text="抱歉,没有找到与该关键字相关的问题或答案！"
+                        android:textColor="#909090"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <Button
+                android:id="@+id/radio_ques"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="30dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/add_question_selector"
+                android:text="提问"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

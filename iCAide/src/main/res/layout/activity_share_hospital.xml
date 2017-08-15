@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.deya.hospital.util.CommonTopView xmlns:commonTopView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="医院授权码"
+        commonTopView:showRight="false"></com.deya.hospital.util.CommonTopView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/big_blue_radius_biankuang"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/codeTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:text="授权码:123456"
+            android:textColor="@color/blue"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/blue" />
+        <TextView
+            android:id="@+id/expiryDateTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="有效期：2017-07-20"
+            android:textColor="@color/blue"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提示:请勿把授权码提供给非本院人员"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/light_yellow"
+        android:textSize="16sp"/>
+
+
+    <Button
+        android:id="@+id/shareBtn"
+        android:layout_width="wrap_content"
+        android:drawableLeft="@drawable/share_docment"
+        android:text="院内分享"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:drawablePadding="10dp"
+        android:background="@drawable/btn_round_sumbmit_bg"
+        android:layout_height="48dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="要更换授权码？或延长有效期？\n或者有任何疑问，请联系客服人员"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/list_title"
+        android:lineSpacingExtra="3dp"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/tellTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/credit_tel"
+        android:textSize="16sp"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/top_color" />
+</LinearLayout>
+

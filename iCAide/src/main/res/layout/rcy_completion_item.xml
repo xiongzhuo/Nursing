@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rb_state"
+    android:layout_width="55dp"
+    android:layout_height="55dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/second_supervisor_radio_selector"
+    android:button="@null"
+    android:gravity="center"
+    android:padding="5dp"
+    android:text=""
+    android:textColor="@color/bottom_text_selector"
+    android:textSize="@dimen/sp_14" />

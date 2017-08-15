@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WeekFragment" >
+ <RelativeLayout
+        android:id="@+id/re_title"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@color/top_color" >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:src="@drawable/btn_back_style" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:text="导读"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:typeface="monospace" />
+
+       
+    </RelativeLayout>
+   
+
+     <LinearLayout
+        android:id="@+id/LinearLayout_1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="0.0dip" >
+
+        <LinearLayout
+            android:id="@+id/webview_progressbar_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10.0dip" >
+
+            <ProgressBar
+                android:id="@+id/webview_progressBar1"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/webview_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

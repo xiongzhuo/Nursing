@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="1.0px"
+    android:insetRight="1.0px" >
+         <item android:state_pressed="false" android:drawable="@drawable/round_stroke_orange_im" />
+          <item android:state_pressed="true" android:drawable="@drawable/round_stroke_orange_s_im" />
+          
+          <!--  <item android:state_pressed="false" android:drawable="@drawable/addbtn_normal" />
+          <item android:state_pressed="true" android:drawable="@drawable/addbtn_select" /> -->
+</selector>

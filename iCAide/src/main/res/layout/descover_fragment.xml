@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/str_tab_setting"
+            android:gravity="center"
+            android:text="工作圈"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:minWidth="48dp"
+            android:text="@string/str_load"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/top"
+        android:visibility="gone"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/guidelayout"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp" >
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" 
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/zhinan_img"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="感控指南"
+                    android:layout_toRightOf="@id/img1"
+                    android:textColor="@color/font_left_label"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/right_next_img" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ededed" />
+
+           <RelativeLayout
+                android:id="@+id/teachLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp" >
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" 
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/jiangke_img"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="任楠讲课"
+                    android:layout_toRightOf="@id/img2"
+                    android:textColor="@color/font_left_label"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/right_next_img" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ededed" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:background="#ededed" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                android:id="@+id/countyLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp" >
+
+                <ImageView
+                    android:id="@+id/img3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" 
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/peixun_img"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="全国培训基地课件"
+                    android:layout_toRightOf="@id/img3"
+                    android:textColor="@color/font_left_label"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/right_next_img" />
+            </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#ededed" />
+
+               <RelativeLayout
+                android:id="@+id/guizhouLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp" >
+
+                <ImageView
+                    android:id="@+id/img4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" 
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/guizhou_img"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="贵州省培训基地课件"
+                    android:layout_toRightOf="@id/img4"
+                    android:textColor="@color/font_left_label"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/right_next_img" />
+            </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#ededed" />
+
+               <RelativeLayout
+                android:id="@+id/hainanLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp" >
+
+                <ImageView
+                    android:id="@+id/img5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" 
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/hainan"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="海南省培训基地课件"
+                    android:layout_toRightOf="@id/img5"
+                    android:textColor="@color/font_left_label"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/right_next_img" />
+            </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#ededed" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/networkView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/no_network" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="亲，您的网络不顺畅哦，\n请检查您的网络，再继续访问！"
+            android:textColor="#909090"
+            android:textSize="16sp" />
+    </LinearLayout>
+<ListView 
+    android:id="@+id/list"
+    android:layout_marginTop="12dp"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:listSelector="@color/listselect"
+    android:scrollbars="none"
+    android:divider="@null">
+</ListView>
+</LinearLayout>

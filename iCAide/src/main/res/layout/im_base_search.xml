@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:IMSDK="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    style="@style/NavPage"
+    android:background="#E4E3E3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.im.sdk.dy.common.view.SettingItem
+        android:id="@+id/search_by_id"
+        style="@style/settings_item_layout_single"
+        IMSDK:item_accessoryType="arrow"
+        android:layout_marginTop="@dimen/LargerPadding"
+        IMSDK:item_showDivider="true"
+        IMSDK:item_titleText="@string/searcha_by_id_tip" />
+
+    <com.im.sdk.dy.common.view.SettingItem
+        android:id="@+id/search_by_indistinct"
+        style="@style/settings_item_layout_single"
+        IMSDK:item_accessoryType="arrow"
+        IMSDK:item_showDivider="true"
+        IMSDK:item_titleText="@string/searcha_by_indistinct_name_tip" />
+</LinearLayout>

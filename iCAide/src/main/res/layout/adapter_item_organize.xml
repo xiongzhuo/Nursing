@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listselect_btn"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text=""
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/imgLay"
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/titleTv"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imgView1"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:id="@+id/imgView2"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/imgView3"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgLay"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/top_color"
+                    android:textSize="12dp"
+                    android:background="@drawable/bg_blue_sharp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/content_black"
+                    android:gravity="right"
+                    android:textSize="@dimen/HintTextSize" />
+
+                <TextView
+                    android:id="@+id/tv_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/content_black"
+                    android:gravity="right"
+                    android:textSize="@dimen/HintTextSize" />
+            </LinearLayout>
+
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/main_bg" />
+</LinearLayout>

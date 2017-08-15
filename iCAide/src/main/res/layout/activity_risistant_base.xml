@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+android:background="@color/main_bg"
+    android:id="@+id/mainLay"
+    android:layout_height="match_parent">
+
+    <com.deya.hospital.util.CommonTopView
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f5f5"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:visibility="gone"
+        android:paddingRight="12dp"
+        android:paddingTop="5dp" >
+
+        <RadioButton
+            android:id="@+id/rb0"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:textSize="18sp"
+            android:background="@drawable/top_round_white"
+            android:textColor="@color/risistant_tab_text_selector"
+            android:text="基本信息" />
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:textSize="18sp"
+                android:background="@drawable/top_round_white"
+                android:textColor="@color/risistant_tab_text_selector"
+                android:text="现场督察" />
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/risistant_tab_text_selector"
+                android:background="@drawable/top_round_white"
+                android:button="@null"
+                android:text="临床反馈" />
+    </RadioGroup>
+
+    <com.deya.hospital.util.HorizontalListView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tabGv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:verticalSpacing="0dp"
+        android:listSelector="@null"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:fadingEdgeLength="5dp"
+        android:requiresFadingEdge="horizontal"
+        app:dividerWidth="5dp"></com.deya.hospital.util.HorizontalListView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragmentPager"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent" />
+
+
+    <LinearLayout
+        android:id="@+id/sumbmitlay"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:paddingLeft="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/shareBtn"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:background="@drawable/btn_sharp_orange_selector"
+            android:text="分\u2000享"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/sumbmitBtn"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_round_sumbmit_bg"
+            android:text="提\u3000交"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>

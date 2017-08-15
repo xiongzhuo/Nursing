@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/roundconer_gray"
+    android:layout_margin="@dimen/dp_40"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/shareMan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_18"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:text="发送给 XXXX"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/dp_15"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/share_logo"
+            android:layout_width="@dimen/dp_60"
+            android:background="@drawable/share_logo"
+            android:layout_alignParentLeft="true"
+            android:layout_height="@dimen/dp_60" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/share_logo"
+            android:text="dojasldjaskod "
+            android:layout_marginLeft="@dimen/dp_10"
+            android:textSize="@dimen/sp_16"
+            android:layout_marginRight="@dimen/dp_10"
+            android:singleLine="true"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/share_logo"
+            android:text="dojasldjaskod "
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="@dimen/dp_5"
+            android:textSize="@dimen/sp_12"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:background="@color/devider"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/cancle"
+            android:layout_width="0dp"
+            android:textSize="@dimen/sp_18"
+            android:text="取消"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/blue"
+            android:layout_height="@dimen/dp_40" />
+        <View
+            android:layout_width="1dp"
+            android:background="@color/devider"
+            android:layout_height="fill_parent"/>
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_width="0dp"
+            android:textSize="@dimen/sp_18"
+            android:text="确认"
+            android:textColor="@color/blue"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="@dimen/dp_40" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:descendantFocusability= "blocksDescendants"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2px"
+            android:background="#efefef" />
+
+          <RelativeLayout
+            android:id="@+id/textLay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="12dp"
+                android:text="手卫生有那些特征"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/answerNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right|center_vertical"
+                android:gravity="right|center_vertical"
+                android:paddingRight="12dp"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:text="(18个回答)"
+                android:textColor="@color/title_gray"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2px"
+            android:layout_marginLeft="20dp"
+            android:background="#efefef" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/question_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="职业暴露"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:maxLength="8"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/mineType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                 android:layout_weight="1"
+                android:padding="10dp"
+                android:text="回答"
+                android:textColor="@color/title_gray"
+                android:textSize="16sp" />
+            
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="删除"
+                android:textColor="@color/top_color"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:background="@color/main_bg" />
+    </LinearLayout>
+
+</RelativeLayout>

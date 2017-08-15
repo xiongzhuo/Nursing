@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    style="@style/CCPScroll"
+    android:background="@color/main_bg"
+    android:scrollbars="none" >
+
+    <LinearLayout
+       android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical" 
+        android:paddingTop="10.0dip" >
+
+          <TextView 
+        android:id="@+id/text_name_t"
+        android:background="@color/main_bg"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:textColor="@color/greytext"
+    	android:padding="10dp"
+    	android:textSize="16sp"
+    	  android:singleLine="true"
+    	android:text="@string/contacts_rname_t"
+        />
+	<View 
+	      android:layout_width="match_parent"
+	      android:layout_height="1dp"
+	      android:background="@color/line"
+	    />
+    <EditText 
+        android:id="@+id/group_name"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="10dp"
+    	android:textSize="16sp"
+    	android:singleLine="true"
+    	android:hint="输入群组名称"
+        />
+<View 
+	      android:layout_width="match_parent"
+	      android:layout_height="1dp"
+	      android:background="@color/line"
+	    />
+  <TextView 
+       android:id="@+id/text_remark_t"
+       android:textColor="@color/greytext"
+        android:background="@color/main_bg"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="10dp"
+    	android:textSize="16sp"
+    	  android:text="@string/contacts_remark_t"
+        />
+	<View 
+	      android:layout_width="match_parent"
+	      android:layout_height="1dp"
+	      android:background="@color/line"
+	    />
+ <EditText 
+        android:id="@+id/group_notice"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="10dp"
+    	android:lines="5"
+    	android:gravity="left|top"
+    	android:hint="输入群公告"
+    	android:textSize="16sp"
+        />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <Button
+            android:id="@+id/create"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_round_blue_selector"
+            android:gravity="center"
+            android:text="@string/app_button_create"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+    
+    
+    
+
+</ScrollView>

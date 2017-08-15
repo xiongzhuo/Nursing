@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundconer_white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:drawableLeft="@drawable/me_tool"
+                android:gravity="center_vertical"
+                android:text="工具"
+                android:drawablePadding="10dp"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/title_gray"
+                android:paddingLeft="@dimen/dp_10" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/devider" />
+
+            <com.deya.hospital.util.ScrollViewIncludeGridView
+                android:id="@+id/gv"
+                android:layout_width="match_parent"
+                android:numColumns="4"
+                android:layout_height="wrap_content"></com.deya.hospital.util.ScrollViewIncludeGridView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

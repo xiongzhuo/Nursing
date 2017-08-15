@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+       <com.deya.hospital.util.CommonTopView
+            xmlns:commonTopView="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/topView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改邮箱"
+            commonTopView:righttext="完成"
+            commonTopView:showRight="true" >
+        </com.deya.hospital.util.CommonTopView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#dedede" />
+
+        <RelativeLayout
+        android:id="@+id/relay2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" >
+
+        <EditText
+            android:id="@+id/departEdt"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="请输入您的姓名"
+            android:paddingLeft="10dp"
+            android:textColorHint="#BBBBBB"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/cancle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/search_delet"
+            android:textColor="#957feb"
+            android:visibility="visible" />
+    </RelativeLayout>
+<View
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="#dedede" />
+</LinearLayout>

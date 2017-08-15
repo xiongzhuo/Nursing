@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="60dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="60dp"
+    android:background="@drawable/dialog_sharp"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="选择调查岗位"
+        android:textColor="@color/top_color"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/top_color" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/nameLay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="被调查人姓名："
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/nameEditor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/big_round_blue_type_style"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/devider" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="工作性质:"
+                android:textSize="14sp" />
+
+            <com.deya.hospital.widget.view.RadioGroupTextView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/groupTextView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:viewgroup_columnNum="0"
+                app:viewgroup_itemmargin="15dp"
+                app:viewgroup_select="radio_empty"
+                app:viewgroup_textBackground="@drawable/sharp_btn_blue"
+                app:viewgroup_textBackground_s="@drawable/round_orange"
+                app:viewgroup_textColor="@color/blue_"
+                app:viewgroup_textColor_s="@color/white"
+                app:viewgroup_textSize="14sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/devider" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="工作类型:"
+                android:textSize="14sp" />
+
+            <com.deya.hospital.widget.view.RadioGroupTextView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/groupTextView2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:viewgroup_columnNum="3"
+                app:viewgroup_itemmargin="20dp"
+                app:viewgroup_linemargin="10dp"
+                app:viewgroup_select="radio_empty"
+                app:viewgroup_shape="rectangle_third"
+                app:viewgroup_textBackground="@drawable/big_round_blue_type_style"
+                app:viewgroup_textBackground_s="@drawable/addperson_btn"
+                app:viewgroup_textColor="@color/blue_"
+                app:viewgroup_textColor_s="@color/white"
+                app:viewgroup_textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider" />
+
+    <Button
+        android:id="@+id/chooseBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_margin="1dp"
+        android:background="@drawable/btn_sharp_bottom_radius_blue"
+        android:text="确   定"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

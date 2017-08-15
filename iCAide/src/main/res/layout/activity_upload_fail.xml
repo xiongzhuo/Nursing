@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider"/>
+    <LinearLayout
+        android:id="@+id/hasFailTask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:background="@drawable/big_blue_biankuang"
+        android:minHeight="@dimen/dp_100"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:gravity="center"
+            android:text="温馨提示"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sp_18" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/blue"/>
+        <TextView
+            android:id="@+id/contentTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_2"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sp_16" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center"
+        android:text="注:上传时请保持网络畅通"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/sp_16" />
+    <Button
+        android:id="@+id/conmitBtn"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_45"
+        android:text="提交"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_round_sumbmit_bg"
+        android:layout_gravity="center_horizontal"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/haveNotTask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:layout_marginTop="@dimen/dp_100"
+            android:src="@drawable/submit_suc"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/title_gray"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="亲,您暂时没有需要上传的数据哟!"/>
+    </LinearLayout>
+
+
+</LinearLayout>

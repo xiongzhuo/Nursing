@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+ <com.deya.hospital.util.CommonTopView
+        xmlns:commonTopView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:text=""
+        commonTopView:showRight="false"
+        android:layout_height="wrap_content">
+    </com.deya.hospital.util.CommonTopView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <WebView
+            android:id="@+id/webview_compontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/line"
+            android:layout_weight="1.0" />
+
+        <View
+            android:id="@+id/line" 
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/bottomView"
+            android:background="@color/devider"/>
+        <LinearLayout
+            android:id="@+id/bottomView"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            >
+             <Button
+                android:id="@+id/shareBtn"
+                android:layout_width="wrap_content"
+                android:background="@drawable/btn_sharp_orange_selector"
+                 android:textSize="18sp"
+                 android:paddingLeft="15dp"
+                 android:paddingRight="15dp"
+                android:textColor="@color/white"
+                android:text="分\u2000享"
+                android:layout_height="40dp" />
+            <Button
+                android:id="@+id/emailBtn"
+                android:layout_width="fill_parent"
+                android:gravity="center"
+                android:text="发送邮件"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_round_sumbmit_bg"
+                android:layout_height="40dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
